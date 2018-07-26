@@ -7,11 +7,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+    <style>
+        article{
+
+            color: #0a3665;
+            font-size: 16px ;
+            text-align: center;
+            width: 700px;
+
+
+        }
+        .choose{
+            color: red;
+
+        }
+        .btn{
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>查看分类</h1>
-<table border="1px" cellpadding="5px" cellspacing="0px" >
+<h3>查看分类</h3>
+<article>
+<table border="0px" cellpadding="5px" cellspacing="0px" >
 
 <tr>
 <th >类别id</th>
@@ -37,8 +56,8 @@
 <td>${category.update_time }</td>
 
 
-<td><a href="category?_id=${category.id }&operation=4" >修改</a>
-<a href="category?_id=${category.id }&operation=3" >删除</a></td>
+<td><a href="category?_id=${category.id }&operation=4" class="choose">修改</a>
+<a href="category?_id=${category.id }&operation=3" class="choose">删除</a></td>
 
 
 </tr>
@@ -46,19 +65,21 @@
 </c:forEach>
 </table>
 
-
+<div style="position: absolute;top: 300px;left: 100px">
 <c:forEach begin="1" end="${PageModel.totalPage}" step="1"  var="pageNo">
 
-<a href="category?pageNo=${pageNo}&operation=2 ">
-${pageNo}
+<a href="category?pageNo=${pageNo}&operation=2 "><button class="btn">
+        ${pageNo}
+</button>
+
 </a>
 
 </c:forEach>
 <br/>
-
+</div>
 <!-- <a href="loginsucc.jsp">返回上一层</a> -->
 
-
+</article>
 
 	
 	

@@ -5,42 +5,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+	<link rel="stylesheet" href="addproduct.css">
 </head>
 <body>
-	<h1>增加商品</h1>
+
+<article>
+	<h3>增加类别</h3>
+	<br />
+
 	<form action="category" method="get">
-	<input type="hidden" name="operation" value="1" />
-	<table>
-	<tr>
-	<td><span>输入类别名称：</span></td>
-	<td><input type="text" name="name" /></td>
-	</tr>
-	<tr>
-	<td><span>输入类别parent_id：</span></td>
-	<td>
-	<select name="parent_id">
-<option value="111">111</option>
-<option value="222">222</option>
-<option value="666">666</option>
-<option value="888">888</option>
-<option value="0">0</option>
-</select>
-	</td>
-	</tr>
-	<tr>
-	<td><span>输入类别状态：</span></td>
-	<td><input type="text" name="status" /></td>
-	</tr>
-	<tr>
-	<td><span>输入类别顺序：</span></td>
-	<td><input type="text" name="sort_order" /></td>
-	</tr>
-	
-	<tr>
-	<td><input type="submit" value="添加" /></td>
-	</tr>
-	</table>
+		<input type="hidden" name="operation" value="1" />
+		<table>
+			<tr class="tr1">
+				<td><span>输入类别名称：</span></td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr class="tr1">
+				<td><span>输入类别parent_id：</span></td>
+				<td>
+					<select name="parent_id">
+						<option value="111">111</option>
+						<option value="222">222</option>
+						<option value="666">666</option>
+						<option value="888">888</option>
+						<option value="0">0</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="tr1">
+				<td><span>输入类别状态：</span></td>
+				<td><input type="text" name="status" /></td>
+			</tr>
+			<tr class="tr1">
+				<td><span>输入类别顺序：</span></td>
+				<td><input type="text" name="sort_order" /></td>
+			</tr>
+
+			<tr class="tr1">
+				<td><input type="submit" class="detail_buttom22" value="添加类别" /></td>
+			</tr>
+		</table>
 
 	</form>
+
+
+
+
+</article>
+
+
+
+
 </body>
 </html>
