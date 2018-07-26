@@ -1,0 +1,25 @@
+
+*{
+    margin:0px ;
+    padding: 0px;
+}
+
+
+.detail_buttom22{
+
+    width: 143px;
+    height: 40px;
+    background-color: #00559a;
+    color: #fff;
+    margin-top: 100px;
+    padding-left:10px ;
+    padding-right:10px ;
+    border: 0px;
+    cursor: pointer;
+
+}
+.tr1{
+
+    margin-bottom: 20px;
+
+}

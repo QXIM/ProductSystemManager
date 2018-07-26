@@ -1,0 +1,244 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    word-break: normal;
+    font-size: 20px;
+}
+
+
+#title{
+    width: 100%;
+    height: 122px;
+    background:#0a3665;
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+
+}
+li{
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+
+/*登录页面*/
+.sign_in_all{
+
+    display: flex;
+    position: relative;
+
+}
+.sign_in{
+    width:1200px ;
+    height: 660px;
+
+    position: relative;
+    left: 5%;
+}
+.sign_in_title{
+    width:1200px ;
+    height: 28px;
+
+    padding-top:34px ;
+    padding-bottom: 20px;
+
+}
+.sign_in_title_txt{
+    font-size: 28px;
+    color: #00559a;
+}
+.sign_in_content{
+    width: 1200px;
+    height: 577px;
+    display: inline-block;
+    display: flex;
+    flex-flow: row;
+
+
+
+}
+.sign_in_content1{
+    width: 476px;
+    height: 452px;
+    position: relative;
+    padding-right:40px ;
+    vertical-align: top;
+    padding-top:30px ;
+    flex-flow: row;
+
+}
+
+.sign_in_content2{
+    width: 450px;
+    height: 577px;
+    background:#f6f6f6 ;
+
+    position: relative;
+    margin-left: 100px;
+    padding-left:43px ;
+    padding-right: 43px;
+
+    flex-flow: row;
+    vertical-align: top;
+
+}
+
+
+
+
+.p1{
+    height:18px;
+    font-size: 18px;
+    color: #00539c;
+    margin-bottom:10px ;
+}
+.p2{
+    height: 14px;
+
+    font-size: 14px;
+    line-height: 14px;
+    color: #939090;
+    margin-bottom: 10px;
+}
+.p3{
+    height: 14px;
+
+    font-size: 14px;
+    line-height: 14px;
+    color: #939090;
+    margin-bottom: 34px;
+}
+.phone_number{
+
+    font-size: 14px;
+
+    color: #000;
+
+    text-align: right;
+    margin-bottom:30px ;
+
+
+
+
+}
+.biaodan{
+    width: 260px;
+    height: 40px;
+    padding-left: 13px;
+    padding-right: 50px;
+
+}
+/*登录NBA账号*/
+/*control_label{
+
+        width: 110px;
+height: 40px;
+font-size: 14px;
+line-height: 40px;
+color: #000;
+display: block;
+position: relative;
+top: 0;
+left: 0;
+text-align: right;
+font-weight: normal;
+margin: 0;
+
+}*/
+/*.NBA_number{
+    display: block;
+}
+*/
+
+.form_group{
+    height: 32px;
+
+}
+.forget_password{
+    color: #000000;
+    padding-right:150px ;
+    padding-left:150px ;
+    padding-bottom:30px ;
+}
+.fuxuan{ width: 18px;height: 18px;"
+}
+.ok{
+    text-align: right;
+}
+.denglu{
+
+    background: #0A3665;
+    color:white ;
+    border: 0px;
+    border-radius: 5px;
+    width: 163px;
+    height: 40px;
+    padding-left:10px ;
+    padding-right:10px ;
+
+
+}
+.sign_in_other_choose{
+    width: 260px;
+    height: 48px;
+
+    padding-top: 24px;
+    text-align: right;
+    float: right;
+
+}
+.img_login_icon_qq{
+    width: 24px;
+    height: 18px;
+    /*background: url(../img/login_icon.png) 0 -162px no-repeat;*/
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+}
+.img_login_icon_weibo{
+    width: 24px;
+    height: 18px;
+   /* background: url(../img/login_icon.png) 0 -200px no-repeat;*/
+    display: inline-block;
+    width: 24px;
+    height: 18px;}
+
+.img_login_icon_zhifubao{
+    width: 24px;
+    height: 18px;
+    /*background: url(../img/login_icon.png) 0 -238px no-repeat;*/
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+}
+
+/*注册页面*/
+
+.zhuce_title{
+    width: 420px;
+    height: 52px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+}
+.p4{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #e30543;
+    margin-bottom: 10px;
+}
+.zhucebiaodan{
+    text-align: right;
+}
+.promise2{
+    width: 500px;
+    height: 34px;
+    padding-left:27px ;
+    padding-right: 10px;
+    float: right;
+}

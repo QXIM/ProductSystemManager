@@ -21,7 +21,7 @@ import com.neuedu.serviceImpl.UserServiceImpl;
 /**
  * Servlet Filter implementation class Login
  */
-@WebFilter("")
+@WebFilter("/login.jsp")
 public class LoginFilter implements Filter {
 
     /**

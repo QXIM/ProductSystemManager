@@ -1,0 +1,47 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+.side_list{
+	width: 245px;
+	height: 304px;
+	color: #FFFFFF;
+	padding-top:35px;
+	padding-bottom: 45px;
+border-radius: 5px;
+	position: relative;
+	left: 10%;
+	background-color: #393f48;
+}
+
+.li2{
+	cursor: pointer;
+    text-align: left;
+
+}
+
+
+
+.a3{
+	text-decoration: none;
+	margin-left: 20px;
+	color: white;
+	font-size: 14px;
+	line-height: 60px
+}
+.a3:hover{
+
+	font-size: 16px;
+}
+
+hr{
+	border: 0px;
+	 background-color:#5e646c;
+	 height:1px;
+ }
+
