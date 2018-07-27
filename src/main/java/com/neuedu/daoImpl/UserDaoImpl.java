@@ -17,8 +17,8 @@ public class UserDaoImpl implements UserDao {
 		for (int i=0;i<user.size();i++) {
 			User u=user.get(i);
 			if(u!=null) {
-				String _name=u.getName();
-				String _password=u.getPassword();
+				String _name=u.getUsername();
+				String _password=u.getUserpassword();
 			if(_name.equals(name)&&_password.equals(password)) {
 				return u;
 			}

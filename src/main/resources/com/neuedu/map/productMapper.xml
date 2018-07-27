@@ -1,0 +1,44 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.neuedu.entity.Product">
+
+
+    <!--总记录数-->
+    <select id="findProductPageCount" resultType="java.lang.Integer" >
+
+        SELECT count(productid) FROM product
+
+    </select>
+
+    <!--某页的数据-->
+    <select id="findProductPageContent" resultType="com.neuedu.entity.Product" parameterType="map" >
+
+        SELECT * FROM product limit #{offset},#{pageSize}
+
+    </select>
+
+    
+    
+    <delete id="deleteProduct"  parameterType="java.lang.Integer" >
+
+
+        delete	from product where productid= #{id}
+
+    </delete>
+
+
+    <update id="updateProduct" parameterType="com.neuedu.entity.Product">
+
+        update	product set pname=#{pname} ,price=#{price} ,image=#{image} ,stock=#{stock} ,detail=#{detail} where productid=#{productid}
+    </update>
+    
+    <insert id="addProduct" parameterType="com.neuedu.entity.Product">
+
+    insert into product( pname,price,image,stock,detail)  values(#{pname},#{price},#{image},#{stock},#{detail})
+
+    </insert>
+
+</mapper>

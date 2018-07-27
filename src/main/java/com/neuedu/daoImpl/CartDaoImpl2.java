@@ -35,7 +35,7 @@ public class CartDaoImpl2 implements CartDao {
 				//��ȡstatement����ִ��sql���
 				
 				Long num=Cart.getCart_no();
-				int pid=Cart.getProduct().getId();
+				int pid=Cart.getProduct().getProductid();
 				int quantity=Cart.getQuantity();
 				String sql2="insert into cart(num,product_id,quantity)  values(?,?,?)";				
 				st= con.prepareStatement(sql2);

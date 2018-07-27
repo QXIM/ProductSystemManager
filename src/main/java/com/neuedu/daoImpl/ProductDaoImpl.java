@@ -27,7 +27,7 @@ public class ProductDaoImpl implements ProductDao {
 		List<Product> p=productdate.products;
 		for(int i=0;i<p.size();i++) {
 			Product products=p.get(i);
-			int _id=products.getId();
+			int _id=products.getProductid();
 			if(_id==id) {
 				
 				p.remove(i);
@@ -43,8 +43,8 @@ public class ProductDaoImpl implements ProductDao {
 		List<Product> p=productdate.products;
 		for(int i=0;i<p.size();i++) {
 			Product products=p.get(i);
-			int _id=products.getId();
-			if(_id==product.getId()) {
+			int _id=products.getProductid();
+			if(_id==product.getProductid()) {
 				p.set(i, product);
 				return true;
 			}
@@ -59,7 +59,7 @@ public class ProductDaoImpl implements ProductDao {
 		List<Product> p=productdate.products;
 		for(int i=0;i<p.size();i++) {
 			Product products=p.get(i);
-			int _id=products.getId();
+			int _id=products.getProductid();
 			if(_id==id) { 
 				return p;
 				

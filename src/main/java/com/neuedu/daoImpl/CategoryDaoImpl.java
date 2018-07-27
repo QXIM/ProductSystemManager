@@ -31,7 +31,7 @@ public class CategoryDaoImpl implements CategoryDao {
 			//��ȡstatement����ִ��sql���
 			
 			System.out.println(category);
-			int _id=category.getId();
+			int _id=category.getCategoryid();
 			String name=category.getName();
 			int parent_id=category.getParent_id();
 			int  status=category.getStatus();
@@ -116,7 +116,7 @@ public class CategoryDaoImpl implements CategoryDao {
 					int update_time=re.getInt("update_time");
 					
 					Category pro=new Category();
-					pro.setId(categoryid);
+					pro.setCategoryid(categoryid);
 					pro.setName(name);
 					pro.setParent_id(parent_id);
 					pro.setStatus(status);
@@ -196,7 +196,7 @@ public class CategoryDaoImpl implements CategoryDao {
 			//��ȡstatement����ִ��sql���
 			
 			System.out.println("t1");
-			int _id=category.getId();
+			int _id=category.getCategoryid();
 			String name=category.getName();
 			int  parent_id=category.getParent_id();
 			int status=category.getStatus();
@@ -255,7 +255,7 @@ public class CategoryDaoImpl implements CategoryDao {
 				if(re.getInt("categoryid")==id) {
 					
 					
-					category.setId(id);
+					category.setCategoryid(id);
 					category.setName(re.getString("name"));
 					category.setParent_id(re.getInt("parent_id"));
 					category.setStatus(re.getInt("status"));

@@ -1,44 +1,43 @@
 package com.neuedu.entity;
 
 public class User {
-	public User(String name, String password) {
-		super();
-		this.name = name;
-		this.password = password;
-	}
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
-	}
-	private int id;
-private String name;
-public User() {
-	super();
-}
-public User(int id, String name, String password) {
-	super();
-	this.id = id;
-	this.name = name;
-	this.password = password;
-}
-public int getId() {
-	return id;
-}
-public void setId(int id) {
-	this.id = id;
-}
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public String getPassword() {
-	return password;
-}
-public void setPassword(String password) {
-	this.password = password;
-}
-private String password;
 
+	private int id;
+private String username;
+private String userpassword;
+
+
+	public int getId() {
+		return id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public String getUserpassword() {
+		return userpassword;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setUserpassword(String userpassword) {
+		this.userpassword = userpassword;
+	}
+	public User(int id,String username,String userpassword){
+		this.id=id;
+		this.username=username;
+		this.userpassword=userpassword;
+
+	}
+	public User(){
+
+	}
 }
+

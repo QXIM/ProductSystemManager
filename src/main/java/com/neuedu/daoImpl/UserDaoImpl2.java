@@ -91,8 +91,8 @@ public class UserDaoImpl2 implements UserDao{
 				String userpassword=re.getString("userpassword");
 				User acc=new User();
 				acc.setId(accountid);
-				acc.setName(username);
-				acc.setPassword(userpassword);
+				acc.setUsername(username);
+				acc.setUserpassword(userpassword);
 				accs.add(acc);
 				
 				
@@ -129,8 +129,8 @@ public class UserDaoImpl2 implements UserDao{
 			
 			
 			int _id=user.getId();
-			String name=user.getName();
-			String password=user.getPassword();
+			String name=user.getUsername();
+			String password=user.getUserpassword();
 			
 			
 			String sql="insert into account(username,userpassword)  values(?,?)";

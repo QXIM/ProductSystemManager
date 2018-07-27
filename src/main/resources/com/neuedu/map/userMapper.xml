@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.neuedu.entity.User">
+
+    <select id="checkUser" resultType="com.neuedu.entity.User" parameterType="map">
+
+        SELECT * FROM account WHERE username=#{username} and userpassword=#{password}
+
+    </select>
+
+
+</mapper>

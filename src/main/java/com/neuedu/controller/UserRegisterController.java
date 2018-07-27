@@ -43,8 +43,8 @@ public class UserRegisterController extends HttpServlet {
 		System.out.println("username="+_username+"password="+MD5Utils.GetMD5Code(_password));
 		
 		User user=new User();
-		user.setName(_username);
-		user.setPassword(MD5Utils.GetMD5Code(_password));
+		user.setUsername(_username);
+		user.setUserpassword(MD5Utils.GetMD5Code(_password));
 		
 		boolean result=addUser(user);
 		

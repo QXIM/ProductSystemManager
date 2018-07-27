@@ -34,8 +34,8 @@ public class ProductDaoImpl2 implements ProductDao {
 			//��ȡstatement����ִ��sql���
 			
 			
-			int _id=product.getId();
-			String name=product.getName();
+			int _id=product.getProductid();
+			String name=product.getPname();
 			double price=product.getPrice();
 			String image=product.getImage();
 			int stock=product.getStock();
@@ -116,8 +116,8 @@ public class ProductDaoImpl2 implements ProductDao {
 			//��ȡ����
 			con=JDBC.conn();
 			//��ȡstatement����ִ��sql���
-			int _id=product.getId();
-			String name=product.getName();
+			int _id=product.getProductid();
+			String name=product.getPname();
 			double price=product.getPrice();
 			String image=product.getImage();
 			int stock=product.getStock(); 
@@ -220,7 +220,7 @@ public class ProductDaoImpl2 implements ProductDao {
 			//��ȡstatement����ִ��sql���
 			
 			
-			int _id=product.getId();
+			int _id=product.getProductid();
 			
 			int stock=product.getStock();
 			

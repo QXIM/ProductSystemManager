@@ -167,7 +167,7 @@ req.getRequestDispatcher("updatecategory.jsp").forward(req, resp);
 			int parent_id=Integer.parseInt(req.getParameter("parent_id"));
 			int status=Integer.parseInt(req.getParameter("status"));
 			int sort_order=Integer.parseInt(req.getParameter("sort_order"));
-			category.setId(id);
+			category.setCategoryid(id);
 			category.setName(name);
 			category.setParent_id(parent_id);
 			category.setSort_order(sort_order);

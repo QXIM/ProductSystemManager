@@ -45,12 +45,12 @@ public class UserController extends HttpServlet {
 		System.out.println(user);
 		if(user!=null) {
 		Cookie cookie=new Cookie("username",_username);
-		cookie.setMaxAge(7*24*3600);
+		cookie.setMaxAge(0);
 		
 		resp.addCookie(cookie);
 		
 		Cookie password_cookie=new Cookie("password",MD5Utils.GetMD5Code(_password));
-		password_cookie.setMaxAge(7*24*3600);
+		password_cookie.setMaxAge(0);
 		resp.addCookie(password_cookie);
 		
 		//�����ݿ������token
@@ -60,7 +60,7 @@ public class UserController extends HttpServlet {
 		
 		
 		userServiceImpl.addToken(token,user);
-		
+			System.out.println("kakakakakk"+token);
 		//��Ự�������token
 		HttpSession session=req.getSession();
 		session.setAttribute("token", token);

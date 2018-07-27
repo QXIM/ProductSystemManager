@@ -3,9 +3,9 @@ package com.neuedu.entity;
 import java.io.Serializable;
 import java.util.List;
 
-/*��ҳģ��
+/*??????
  * 
- * ����
+ * ????
  * */
 
 public class PageModel<T> implements Serializable {
@@ -13,11 +13,11 @@ public class PageModel<T> implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -4090015360182961718L;
-	//ÿһҳ�����ݼ���
+	//????????????
 	private List<T> date;
-	//�ܹ�����ҳ
+	//????????
 	private int totalPage;
-	//��ǰҳ��
+	//??????
 	private int currentPage;
 	
 	
@@ -48,8 +48,10 @@ public class PageModel<T> implements Serializable {
 	public void setTotalPage(int totalPage) {
 		this.totalPage = totalPage;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "PageModel [date=" + date + ", totalPage=" + totalPage + ", currentPage=" + currentPage + "]";
+	}
 
 }

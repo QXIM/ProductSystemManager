@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class Product implements Serializable{
 	
-	public Product(int id, String name, String detail, double price, int stock, String image) {
+	public Product(int productid, String pname, String detail, double price, int stock, String image) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.productid = productid;
+		this.pname = pname;
 		this.detail = detail;
 		this.price = price;
 		this.stock = stock;
@@ -23,15 +23,15 @@ public class Product implements Serializable{
 		this.stock = stock;
 	}
 	private static final long serialVersionUID = -8794185251517382884L;
-	private int id;
-	private String name;
+	private int productid;
+	private String pname;
 	private String detail;
 	private double price;
 	private int stock;
 	private String image;
-	public Product( String name, String detail, double price, int stock, String image) {
+	public Product( String pname, String detail, double price, int stock, String image) {
 		super();
-		this.name = name;
+		this.pname = pname;
 		this.detail = detail;
 		this.price = price;
 		this.stock = stock;
@@ -45,17 +45,18 @@ public class Product implements Serializable{
 		this.image = image;
 	}
 	
-	public int getId() {
-		return id;
+
+	public int getProductid() {
+		return productid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int productid) {
+		this.productid = productid;
 	}
-	public String getName() {
-		return name;
+	public String getPname() {
+		return pname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String pname) {
+		this.pname = pname;
 	}
 	public String getDetail() {
 		return detail;
@@ -69,19 +70,19 @@ public class Product implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public Product(int id, String name, String detail, double price,String image) {
+	public Product(int productid, String pname, String detail, double price,String image) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.productid = productid;
+		this.pname = pname;
 		this.detail = detail;
 		this.price = price;
 		this.image=image;
 	
 	}
-	public Product( String name, String detail, double price,String image) {
+	public Product( String pname, String detail, double price,String image) {
 		super();
 		
-		this.name = name;
+		this.pname = pname;
 		this.detail = detail;
 		this.price = price;
 		this.image=image;
@@ -89,7 +90,7 @@ public class Product implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "ï¿½ï¿½Æ· [ï¿½ï¿½Æ·id=" + id + ", ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½=" + name + ", ï¿½ï¿½Æ·ï¿½ï¿½Ï¸=" + detail + ", ï¿½ï¿½Æ·ï¿½Û¸ï¿½=" + price +  ", ï¿½ï¿½Æ·ï¿½ï¿½ï¿½=" + stock +"]";
+		return "ÉÌÆ· [ÉÌÆ·id=" + productid + ", ÉÌÆ·Ãû³Æ=" + pname + ", ÉÌÆ·ÏêÏ¸=" + detail + ", ÉÌÆ·¼Û¸ñ=" + price +  ", ÉÌÆ·¿â´æ=" + stock +"]";
 	}
 	public Product() {
 		super();

@@ -37,8 +37,8 @@ public class Input {
 		
 		OrderItem orderItem =new  OrderItem();
 			orderItem.setId(id);
-			orderItem.setProduct_id(c.getProduct().getId());
-			orderItem.setProduct_name(c.getProduct().getName());
+			orderItem.setProduct_id(c.getProduct().getProductid());
+			orderItem.setProduct_name(c.getProduct().getPname());
 			orderItem.setOrderItem_no(Order_no);
 			orderItem.setCurrent_unit_price(c.getProduct().getPrice());
 			orderItem.setQuantity(c.getQuantity());
