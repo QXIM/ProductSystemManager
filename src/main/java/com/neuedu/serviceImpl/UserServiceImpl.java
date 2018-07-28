@@ -9,7 +9,7 @@ import com.neuedu.input.MD5Utils;
 import com.neuedu.service.UserService;
 
 public class UserServiceImpl implements UserService {
-	UserDao userDaoImpl=new UserDaoImpl2();
+	UserDao userDaoImpl=new MyBatisloginImpl();
 	
 	
 	@Override

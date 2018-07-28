@@ -10,6 +10,9 @@
         SELECT * FROM account WHERE username=#{username} and userpassword=#{password}
 
     </select>
+    <update id="updateTokenByAccountid" parameterType="map" >
+update	account set token=#{token}  where accountid=#{accountid}
+    </update>
 
 
 </mapper>

@@ -18,7 +18,7 @@ import com.neuedu.serviceImpl.UserServiceImpl;
 
 
  
-@WebFilter("/product/*")
+/*@WebFilter("/product/*")*/
 public class CheckLogin implements Filter {
 
     /**
@@ -53,7 +53,7 @@ public class CheckLogin implements Filter {
 			User _user=(User)user_obj;
 			System.out.println("guolv="+_user);
 			UserService userservice=new UserServiceImpl();
-			String _token= userservice.findToken(_user.getId());
+			String _token= userservice.findToken(_user.getAccountid());
 			
 			if(_token!=null) {
 			if(_session.equals(_token)) {
@@ -63,8 +63,45 @@ public class CheckLogin implements Filter {
 		}
 		}
 		_resp.sendRedirect("http://localhost:8080/ProductSystem_web/login.jsp");
-		
-		
+
+
+
+
+
+/*
+
+
+		HttpServletRequest request = (HttpServletRequest)_request;
+		HttpServletResponse response = (HttpServletResponse) _response;
+		//得到会话域,服务器会根据已写到浏览器的JESSIONID查询到这个会话并加入到会话
+		HttpSession session = request.getSession();
+
+		Object o = session.getAttribute("token");
+		Object o1 = session.getAttribute("acc");
+
+		if(o!=null&&o1!=null) {
+			String token = (String) o;
+			Account account = (Account) o1;
+			LoginService ls = new LoginServiceImpl();
+			String data_token = ls.findTokenByAccountId(account.getId());
+			if(data_token!=null) {
+				if(token.equals(data_token)) {
+					//有效的token
+					chain.doFilter(request, response);
+					return;
+				}
+			}
+
+		}
+
+		response.sendRedirect("http://localhost:8080/Serverlet01/Login.jsp");
+*/
+
+
+
+
+
+
 	}
 
 	/**

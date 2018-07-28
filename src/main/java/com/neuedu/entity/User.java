@@ -2,13 +2,13 @@ package com.neuedu.entity;
 
 public class User {
 
-	private int id;
+	private int accountid;
 private String username;
 private String userpassword;
 
 
-	public int getId() {
-		return id;
+	public int getAccountid() {
+		return accountid;
 	}
 
 	public String getUsername() {
@@ -19,8 +19,8 @@ private String userpassword;
 		return userpassword;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAccountid(int accountid) {
+		this.accountid = accountid;
 	}
 
 	public void setUsername(String username) {
@@ -30,8 +30,8 @@ private String userpassword;
 	public void setUserpassword(String userpassword) {
 		this.userpassword = userpassword;
 	}
-	public User(int id,String username,String userpassword){
-		this.id=id;
+	public User(int accountid,String username,String userpassword){
+		this.accountid=accountid;
 		this.username=username;
 		this.userpassword=userpassword;
 

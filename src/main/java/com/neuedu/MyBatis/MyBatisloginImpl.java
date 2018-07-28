@@ -48,6 +48,22 @@ public class MyBatisloginImpl implements UserDao {
     @Override
     public void updateTokenByAccountid(String token, User user) {
 
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession(true);
+
+        Integer accountid=user.getAccountid();
+        Map<Object,Object> map=new HashMap<Object,Object>();
+        map.put("token",token);
+        map.put("accountid",accountid);
+
+        Integer o= session.update("com.neuedu.entity.User.updateTokenByAccountid",map);
+        System.out.println(o);
+        MyBatis.close(session);
+
+
+
     }
 
     @Override

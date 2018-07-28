@@ -90,7 +90,7 @@ public class UserDaoImpl2 implements UserDao{
 				String  username=re.getString("username");
 				String userpassword=re.getString("userpassword");
 				User acc=new User();
-				acc.setId(accountid);
+				acc.setAccountid(accountid);
 				acc.setUsername(username);
 				acc.setUserpassword(userpassword);
 				accs.add(acc);
@@ -128,7 +128,7 @@ public class UserDaoImpl2 implements UserDao{
 			//��ȡstatement����ִ��sql���
 			
 			
-			int _id=user.getId();
+			int _id=user.getAccountid();
 			String name=user.getUsername();
 			String password=user.getUserpassword();
 			
@@ -173,7 +173,7 @@ public class UserDaoImpl2 implements UserDao{
 			String sql="update	account set token=?  where accountid=?";
 			st= con.prepareStatement(sql);
 			st.setString(1,token);
-			st.setInt(2, user.getId());
+			st.setInt(2, user.getAccountid());
 			System.out.println(sql);
 			st.execute();		
 			
