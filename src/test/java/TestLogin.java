@@ -4,6 +4,7 @@ import com.neuedu.MyBatis.MyBatisloginImpl;
 import com.neuedu.dao.CategoryDao;
 import com.neuedu.dao.ProductDao;
 import com.neuedu.dao.UserDao;
+import com.neuedu.entity.Category;
 import com.neuedu.entity.Product;
 import org.junit.Test;
 
@@ -44,11 +45,53 @@ public class TestLogin {
 
 
     }
-    @Test
+
     public void testFindCategoryByPage(){
 
         CategoryDao productDao=new MyBatisCategoryImpl();
         productDao.findAll(2,3);
+
+    }
+
+    public  void TestsubString()  {
+        String s = "sunjavacjavaeeejavapuujavakkkjava";
+        int y = 0;
+        while (s.indexOf("java")!=-1){
+            y++;
+            s = s.substring(s.indexOf("java")+4);
+        }
+        System.out.println(y);
+    }
+
+    public void TestIndexOf(){
+
+        String s="javacCjavaC";
+
+        System.out.println(s.indexOf("c"));
+
+
+    }
+
+    public void testAddCategory(){
+        CategoryDao categorydao=new MyBatisCategoryImpl();
+     Category ca=   new Category(111, "±ùÏä", 1, 1, 2018,2018);
+        categorydao.addCategory(ca);
+
+    }
+
+    public void testDeleteCategory(){
+        CategoryDao categorydao=new MyBatisCategoryImpl();
+        categorydao.deleteCategory(20);
+
+    }
+    @Test
+    public void testUpdateCategory(){
+        CategoryDao categorydao=new MyBatisCategoryImpl();
+        Category ca=   new Category();
+        ca.setCategoryid(15);
+        ca.setName("bbb");
+
+        categorydao.updateCategory(ca);
 
     }
 

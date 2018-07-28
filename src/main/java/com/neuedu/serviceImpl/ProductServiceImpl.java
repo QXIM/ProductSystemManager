@@ -2,6 +2,7 @@ package com.neuedu.serviceImpl;
 
 import java.util.List;
 
+import com.neuedu.MyBatis.MyBatisProductImpl;
 import com.neuedu.dao.ProductDao;
 
 import com.neuedu.daoImpl.ProductDaoImpl2;
@@ -10,7 +11,7 @@ import com.neuedu.entity.Product;
 import com.neuedu.service.ProductService;
 
 public class ProductServiceImpl implements ProductService {
-	ProductDao productdao=new ProductDaoImpl2();
+	ProductDao productdao=new MyBatisProductImpl();
 	
 	public boolean addProduct(Product product) {
 		// TODO Auto-generated method stub

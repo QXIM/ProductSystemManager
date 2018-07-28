@@ -2,6 +2,7 @@ package com.neuedu.serviceImpl;
 
 import java.util.List;
 
+import com.neuedu.MyBatis.MyBatisCategoryImpl;
 import com.neuedu.dao.CategoryDao;
 import com.neuedu.daoImpl.CategoryDaoImpl;
 import com.neuedu.entity.Category;
@@ -10,7 +11,7 @@ import com.neuedu.entity.Product;
 import com.neuedu.service.CategoryService;
 
 public class CategoryServiceImpl implements CategoryService {
-	CategoryDao CategoryDao =new CategoryDaoImpl();
+	CategoryDao CategoryDao =new MyBatisCategoryImpl();
 	@Override
 	public boolean addCategory(Category category) {
 		

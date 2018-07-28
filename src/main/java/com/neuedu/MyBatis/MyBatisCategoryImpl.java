@@ -16,7 +16,31 @@ public class MyBatisCategoryImpl implements CategoryDao {
 
     @Override
     public boolean addCategory(Category category) {
-        return false;
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+
+        session = sqlMapper.openSession(true);
+
+
+        String name=category.getName();
+        Integer parent_id=category.getParent_id();
+        Integer sort_order=category.getSort_order();
+        Integer status=category.getStatus();
+
+        Long create_time=category.getCreate_time();
+        Long update_time=category.getUpdate_time();
+
+        Integer result=session.update("com.neuedu.entity.Category.addCategory",category);
+        MyBatis.close(session);
+        System.out.println(result);
+        if(result==1){
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 
     @Override
@@ -55,12 +79,52 @@ public class MyBatisCategoryImpl implements CategoryDao {
 
     @Override
     public boolean deleteCategory(int id) {
-        return false;
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+
+        session = sqlMapper.openSession(true);
+
+        Integer result=session.delete("com.neuedu.entity.Category.deleteCategory",id);
+        MyBatis.close(session);
+        System.out.println(result);
+        if(result==1){
+            return true;
+        }else{
+            return false;
+        }
+
+
+
+
     }
 
     @Override
     public boolean updateCategory(Category category) {
-        return false;
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+
+        session = sqlMapper.openSession(true);
+
+        Integer categoryid=category.getCategoryid();
+        String name=category.getName();
+        Integer parent_id=category.getParent_id();
+        Integer sort_order=category.getSort_order();
+        Integer status=category.getStatus();
+
+        Long create_time=category.getCreate_time();
+        Long update_time=category.getUpdate_time();
+        Integer result=session.update("com.neuedu.entity.Category.updateCategory",category);
+        MyBatis.close(session);
+        System.out.println(result);
+        if(result==1){
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 
     @Override

@@ -47,7 +47,7 @@
 <c:forEach items="${PageModel.date}"  var="category">
 
 <tr>
-<td>${category.id }</td>
+<td>${category.categoryid }</td>
 <td>${category.name }</td>
 <td>${category.parent_id }</td>
 <td>${category.status }</td>
@@ -56,8 +56,8 @@
 <td>${category.update_time }</td>
 
 
-<td><a href="category?_id=${category.id }&operation=4" class="choose">修改</a>
-<a href="category?_id=${category.id }&operation=3" class="choose">删除</a></td>
+<td><a href="category?_id=${category.categoryid }&operation=4" class="choose">修改</a>
+<a href="category?_id=${category.categoryid }&operation=3" class="choose">删除</a></td>
 
 
 </tr>

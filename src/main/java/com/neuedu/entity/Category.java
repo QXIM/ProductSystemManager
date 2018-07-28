@@ -65,6 +65,21 @@ public class Category {
 		this.create_time = create_time;
 		this.update_time = update_time;
 	}
+
+	public Category( int parent_id, String name, int status, int sort_order, long create_time,
+					long update_time) {
+		super();
+
+		this.parent_id = parent_id;
+		this.name = name;
+		this.status = status;
+		this.sort_order = sort_order;
+		this.create_time = create_time;
+		this.update_time = update_time;
+	}
+
+
+
 	public Category() {
 		super();
 	}

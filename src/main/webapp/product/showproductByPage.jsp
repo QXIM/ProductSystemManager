@@ -52,16 +52,16 @@ margin: 10px;
 <c:forEach items="${PageModel.date}"  var="product">
 
 <tr>
-<td>${product.id }</td>
-<td>${product.name}</td>
+<td>${product.productid }</td>
+<td>${product.pname}</td>
 <td>${product.price }</td>
 <td>${product.detail }</td>
 <td>${product.stock }</td>
 <td>${product.image }</td>
 
-<td><a href="product?_id=${product.id }&operation=3" class="choose" >修改</a></td>
-<td><a href="product?_id=${product.id }&operation=4" class="choose">删除</a></td>
-<td><a href="cart?pid=${product.id }&operation=1" class="choose">加入购物车</a></td>
+<td><a href="product?_id=${product.productid }&operation=3" class="choose" >修改</a></td>
+<td><a href="product?_id=${product.productid }&operation=4" class="choose">删除</a></td>
+<td><a href="cart?pid=${product.productid }&operation=1" class="choose">加入购物车</a></td>
 
 </tr>
 

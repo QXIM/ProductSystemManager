@@ -13,8 +13,22 @@
     select * from category limit #{offset},#{pageSize}
     </select>
 
+    <insert id="addCategory" parameterType="com.neuedu.entity.Category">
+    insert into category(name,parent_id,status,sort_order,create_time,update_time)  values(#{name},#{parent_id},#{status},#{sort_order},now(),now())
+  </insert>
 
 
+
+    <delete id="deleteCategory" parameterType="java.lang.Integer">
+
+  delete	from category where categoryid= #{id}
+
+    </delete>
+
+    <update id="updateCategory" parameterType="com.neuedu.entity.Category">
+
+  update	category set name=#{name}, parent_id=#{parent_id} ,status=#{status}, sort_order=#{sort_order}   where categoryid=#{categoryid}
+    </update>
 
 
 

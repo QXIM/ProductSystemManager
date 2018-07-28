@@ -12,7 +12,7 @@
 		
 			<div class="head_top"> 
 			
-			<h1 style="color: white" align="center">欢迎${user.name }登录后台管理系统</h1>
+			<h1 style="color: white" align="center">欢迎${user.username }登录后台管理系统</h1>
 				</div>
 				
 		</header>
