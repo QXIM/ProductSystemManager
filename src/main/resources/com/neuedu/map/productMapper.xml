@@ -41,4 +41,10 @@
 
     </insert>
 
+
+
+    <select id="findproductById" resultType="com.neuedu.entity.Product" parameterType="java.lang.Integer">
+        select * from product where productid=#{id}
+    </select>
+
 </mapper>

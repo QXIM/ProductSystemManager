@@ -33,8 +33,8 @@
 <td>${cart.id }</td>
 <td>${cart.cart_no }</td>
 
-<td>${cart.product.id }</td>
-<td>${cart.product.name }</td>
+<td>${cart.product.productid }</td>
+<td>${cart.product.pname }</td>
 <td>${cart.product.price }</td>
 <td>${cart.product.detail }</td>
 <td>${cart.product.stock }</td>

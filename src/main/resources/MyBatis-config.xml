@@ -19,6 +19,7 @@
         <mapper resource="com\neuedu\map\userMapper.xml"/>
         <mapper resource="com\neuedu\map\productMapper.xml"/>
         <mapper resource="com\neuedu\map\categoryMapper.xml"/>
+        <mapper resource="com\neuedu\map\orderMapper.xml"/>
     </mappers>
 
 </configuration>

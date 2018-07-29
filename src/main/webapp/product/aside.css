@@ -8,7 +8,7 @@
 }
 .side_list{
 	width: 245px;
-	height: 304px;
+	height: 360px;
 	color: #FFFFFF;
 	padding-top:35px;
 	padding-bottom: 45px;
@@ -16,6 +16,7 @@ border-radius: 5px;
 	position: relative;
 	left: 10%;
 	background-color: #393f48;
+	overflow: scroll;
 }
 
 .li2{
@@ -31,7 +32,7 @@ border-radius: 5px;
 	margin-left: 20px;
 	color: white;
 	font-size: 14px;
-	line-height: 60px
+	line-height: 60px;
 }
 .a3:hover{
 
@@ -43,4 +44,36 @@ hr{
 	 background-color:#5e646c;
 	 height:1px;
  }
+
+
+#product{
+
+	display: none;
+
+}
+
+
+
+#productAll{
+	margin-left: 20px;
+	color: white;
+	font-size: 14px;
+	line-height: 60px;
+
+
+}
+
+
+#category{
+	display: none;
+
+
+
+}
+#categoryAll{
+	margin-left: 20px;
+	color: white;
+	font-size: 14px;
+	line-height: 60px;
+}
 

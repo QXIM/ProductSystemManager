@@ -2,6 +2,7 @@ package com.neuedu.serviceImpl;
 
 import java.util.*;
 
+import com.neuedu.MyBatis.MyBatisOrderImpl;
 import com.neuedu.dao.CartDao;
 import com.neuedu.dao.OrderDao;
 import com.neuedu.dao.OrderItemDao;
@@ -22,7 +23,7 @@ import com.neuedu.service.OrderService;
 
 
 public class OrderServiceImpl implements OrderService {
-	OrderDao orderDaoImpl=new OrderDaoImpl2();
+	OrderDao orderDaoImpl=new MyBatisOrderImpl();
 	OrderItemDao orderItemDao=new OrderItemDaoImpl2();
 	CartDao CartDao =new CartDaoImpl2();
 	@Override

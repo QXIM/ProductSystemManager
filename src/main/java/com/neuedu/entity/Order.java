@@ -17,7 +17,22 @@ public class Order implements Serializable {
 	private long order_no;
 	private long create_time;
 	private double payment;
-	
+
+	@Override
+	public String toString() {
+		return "Order{" +
+				"id=" + id +
+				", user_id=" + user_id +
+				", shipping_id=" + shipping_id +
+				", payment_type='" + payment_type + '\'' +
+				", postage=" + postage +
+				", status=" + status +
+				", order_no=" + order_no +
+				", create_time=" + create_time +
+				", payment=" + payment +
+				'}';
+	}
+
 	public int getUser_id() {
 		return user_id;
 	}
@@ -84,11 +99,5 @@ public class Order implements Serializable {
 	public void setPayment(double payment) {
 		this.payment = payment;
 	}
-	@Override
-	public String toString() {
-		return "���� [����id=" + id + ", �û�id=" + user_id + ", ��ַid=" + shipping_id 
-				+ ", ���ʽ=" + payment_type + ", �����˷�=" + postage + ", ����״̬=" + status + ", ������="
-				+ order_no + ", ��������ʱ��=" + create_time + ", �����ܼ�=" + payment + "]";
-	}
-	
+
 }

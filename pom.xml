@@ -39,6 +39,13 @@
         <version>2.2.1</version>
       </dependency>
 
+
+      <dependency>
+        <groupId>org.webjars.bower</groupId>
+        <artifactId>jquery</artifactId>
+        <version>3.3.1</version>
+      </dependency>
+
       <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
       <dependency>
         <groupId>com.alibaba</groupId>

@@ -34,7 +34,7 @@
 
 <tr>
 <td>${order.id}</td>
-<td>${user.id }</td>
+<td>${user.accountid}</td>
 <td>${order.shipping_id }</td>
 <td>${order.payment_type }</td>
 <td>${order.create_time }</td>

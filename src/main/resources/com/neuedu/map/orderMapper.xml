@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.entity.Order">
+
+    <insert id="addOrder" parameterType="com.neuedu.entity.Order" >
+insert into orders( user_id,shipping_id,order_no,payment_type,postage,status,payment,create_time)  values(#{user_id},#{shipping_id},#{order_no},#{payment_type},#{postage},#{status},#{payment},now());
+    </insert>
+
+    <select id="findAll" resultType="com.neuedu.entity.Order">
+        select * from orders;
+    </select>
+
+</mapper>

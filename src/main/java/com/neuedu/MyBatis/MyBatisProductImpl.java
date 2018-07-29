@@ -101,11 +101,29 @@ public class MyBatisProductImpl implements ProductDao {
 
     @Override
     public Product findproductById(int id) {
-        return null;
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession();
+
+
+        Product p= session.selectOne("com.neuedu.entity.Product.findproductById",id);
+
+
+
+
+        System.out.println(p);
+        MyBatis.close(session);
+
+        return p;
+
+
+
     }
 
     @Override
     public PageModel<Product> findProductByPage(int pageNo, int pageSize) {
+
         SqlSession session;
        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
         session = sqlMapper.openSession();

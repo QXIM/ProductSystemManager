@@ -12,7 +12,17 @@ public class Cart implements Serializable{
 	private long cart_no;
 	private int quantity=1;
 	private Product product;
-	
+
+	@Override
+	public String toString() {
+		return "Cart{" +
+				"id=" + id +
+				", cart_no=" + cart_no +
+				", quantity=" + quantity +
+				", product=" + product +
+				'}';
+	}
+
 	public int getQuantity() {
 		return quantity;
 	}
@@ -45,10 +55,7 @@ public class Cart implements Serializable{
 		this.product = product;
 		this.quantity=quantity;
 	}
-	@Override
-	public String toString() {
-		return "���ﳵ�� [���ﳵid=" + id + ", ���ﳵ���=" + cart_no + ", ��Ʒ=" + product + "��������=  "+quantity+"]";
-	}
+
 	public Cart() {
 		super();
 	}

@@ -1,12 +1,13 @@
-import com.neuedu.MyBatis.MyBatisCategoryImpl;
-import com.neuedu.MyBatis.MyBatisProductImpl;
-import com.neuedu.MyBatis.MyBatisloginImpl;
-import com.neuedu.dao.CategoryDao;
-import com.neuedu.dao.ProductDao;
-import com.neuedu.dao.UserDao;
+import com.neuedu.MyBatis.*;
+import com.neuedu.dao.*;
 import com.neuedu.entity.Category;
+import com.neuedu.entity.Order;
+import com.neuedu.entity.OrderItem;
 import com.neuedu.entity.Product;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestLogin {
 
@@ -84,7 +85,7 @@ public class TestLogin {
         categorydao.deleteCategory(20);
 
     }
-    @Test
+
     public void testUpdateCategory(){
         CategoryDao categorydao=new MyBatisCategoryImpl();
         Category ca=   new Category();
@@ -92,6 +93,43 @@ public class TestLogin {
         ca.setName("bbb");
 
         categorydao.updateCategory(ca);
+
+    }
+
+
+    public void testAddOrder(){
+
+        OrderDao orderdao=new MyBatisOrderImpl();
+        Order order=new Order();
+        order.setPostage(12);
+        order.setPayment(2000);
+        orderdao.addOrder(order);
+
+
+    }
+
+    @Test
+    public void testFindAllOrder(){
+        OrderDao orderdao=new MyBatisOrderImpl();
+        orderdao.findAll();
+
+
+    }
+
+
+    @Test
+    public void testFindProductById(){
+
+        ProductDao productDao=new MyBatisProductImpl();
+        productDao.findproductById(1);
+
+    }
+    public void testAddOrderItem(){
+
+        OrderItemDao orderItemDao=new MyBatisOrderItemImpl();
+        List<OrderItem> o=new ArrayList<OrderItem>();
+
+        orderItemDao.addOrderItem(o);
 
     }
 
