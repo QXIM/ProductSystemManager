@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			NBA store
+		</title>
+
+		<link rel="icon" href="img/titile.icon" type="image/icon"/>
+		
+		<link rel="stylesheet" href="css/shoping_cart.css" />
+		
+		
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		<script>
+			
+			$(function (){
+			alert("123")
+			$.ajax({
+				type:'get',
+				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findAllCart',
+				dataType:'json',
+				success : function (result) {
+				    alert("1223")
+					$("#num").val("123")
+                    $.each(result,function(i,e) {
+						$("#pname").text("12345132")
+						$("#rule").html(e.procuct.rule)
+						$("#detail").html(e.procuct.detail)
+					var price=$("#price").html(e.procuct.price)
+					/*var num=	$("#num").val("10")
+					var allPrice=$("#allPrice").html(price*num)*/
+
+
+                    })
+
+                }
+
+
+
+
+			})
+
+                /*$.ajax({
+                    type : 'post',
+                    url : 'http://localhost:8080/ProductSystem_web/front/product.do' ,
+                    data : {
+                        pageNo :  1
+                    } ,
+                    dataType : 'json' ,
+
+                    success : function(data) {
+                        pageNo++;
+                        /!* $("#container").removeClass('add-loading') *!/
+                        $.each(data , function(i,e){
+                            var item = $("<div>"+e.name+" : " + e.detail+"</div>")
+                            item.addClass('size');
+                            $("#container").append(item);
+
+                        })
+                    }
+                })*/
+
+
+
+
+
+
+            })
+			
+			
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		<header>
+			<div class="head_top">
+				<a href="index.html"><div class="logo"></div></a>
+				<div class="search">
+					<div> 
+						<input type="text" class="search2"  placeholder="总冠军T恤抢先订" border="0px" /> 
+					</div>
+				<!--<a href="detailed.html"><div class="search3" ></a>-->
+				</div>
+				</div>
+				<div class="tshirt">
+					<span class="txt">定制T恤</span>
+				</div>
+				<div class="qiuyi">
+				<span class="txt">定制球衣</span>
+				
+				</div>
+				<div class="user">
+					<div class="head_list"><a href="index.html" class="a1">退出登录</a> </div>
+					<div class="head_list2">我的账户</div>
+					<div class="head_list3">
+						<div class="shop_car_logo">
+							<a href="shoping_cart.html" class="a1"><img src="img/cart-icon2.png" class="car_logo" /> </a>
+						</div>
+						<div class="shop_car">
+							<a href="shoping_cart.html" class="a1"><span class="shop_car_quantity">1</span></a>
+						</div>
+					</div>
+					<div class="head_list4">
+						<div class="service_logo"> </div>
+						<span class="service_txt"> 在线客服</span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside class="menu_top">
+			<ul class="menu_content">
+				<li class="choose_team inline_block">
+					<span class="txt_center"> 选择球队 </span>
+				</li>
+				<li class="choose_logo_contet inline_block ">
+					<img src="img/nike-logo.jpg" class="nike_logo txt_center" />
+				</li>
+				<li class="choose_brand inline_block">
+					<span class="txt_center">品牌 </span>
+				</li>
+				<li class="choose_all_commodity inline_block">
+					<span class="txt_center">所有商品 </span>
+				</li>
+				<li class="choose_jersey inline_block">
+					<span class="txt_center">球衣 </span>
+				</li>
+				<li class="choose_jacket inline_block">
+					<span class="txt_center">上装 </span>
+				</li>
+				<li class="choose_trousers inline_block">
+					<span class="txt_center">下装 </span>
+				</li>
+				<li class="choose_women inline_block">
+					<span class="txt_center">女子</span>
+				</li>
+				<li class="choose_children inline_block">
+					<span class="txt_center">儿童/青少年</span>
+				</li>
+				<li class="choose_shoes inline_block">
+					<span class="txt_center">鞋类</span>
+				</li>
+				<li class="choose_basketball inline_block">
+					<span class="txt_center">篮球</span>
+				</li>
+				<li class="choose_other inline_block">
+					<span class="txt_center">配件</span>
+				</li>
+			</ul>
+		</aside>
+		
+		<div class="shoping_cart" id="div1" >
+			<div class="shoping_cart_title">
+				<span class="shoping_cart_title_txt">购物车</span>
+			</div>
+			<div class="shoping_cart_choose">
+				<input type="radio" class="choose_buttom" /><span class="shoping_cart_choose_txt">全选</span>
+				<span class="shoping_cart_choose_txt">删除</span>
+			</div>
+			<div class="shoping_cart_detail">
+				<div class="shoping_cart_detail_title">
+					<div class="shoping_cart_detail_title1">
+						<span class="shoping_cart_detail_title_span">NBA产品</span> </div>
+					<div class="shoping_cart_detail_title2">
+						<span class="shoping_cart_detail_title_span" >价格</span> </div>
+					<div class="shoping_cart_detail_title3">
+						<span class="shoping_cart_detail_title_span">数量</span> </div>
+					<div class="shoping_cart_detail_title4">
+						<span class="shoping_cart_detail_title_span" >总计</span> </div>
+					<div class="shoping_cart_detail_title5">
+						<span class="shoping_cart_detail_title_span">删除</span> </div>
+				</div>
+				<div class="shoping_cart_detail_content">
+					<div class="shoping_cart_detail_content1">
+						<div class="shoping_cart_detail_content1_buttom">
+							<input type="checkbox" class="shoping_cart_detail_content1_buttom_css" />
+						</div>
+						
+						<div class="shoping_cart_detail_content1_pic">
+						<img src="img/james_548X548.jpg" class="shoping_cart_detail_content1_pic_css" />	
+						</div>
+						
+						<div class="shoping_cart_detail_content1_txt" >
+							<p class="shoping_cart_detail_content1_txt1" id="pname">
+								NBA M&N 骑士队詹姆斯 SW球迷版复刻球衣</p>
+								<div class="shoping_cart_detail_content1_txt2">
+							<p class="shoping_cart_detail_content1_txt2_2" >商品：NMNB17701020012</p>
+							<p class="shoping_cart_detail_content1_txt2_2" id="rule">尺寸：S</p>
+							<p class="shoping_cart_detail_content1_txt2_2" id="detail">颜色：图片色</p>
+							</div>
+						</div>
+						<div class="shoping_cart_detail_content1_money">
+							<span class="shoping_cart_detail_content1_money_css" id="price">¥850.00</span>
+						</div>
+						<div class="shoping_cart_detail_content1_count" >
+							
+					<div class="detail_centent_low"></div>
+					<div class="detail_centent_sl"><input type="text" value="1" class="shuliang"  id="num"/> </div>
+					<div class="detail_centent_hight"></div>
+						</div>
+						<div class="shoping_cart_detail_content1_all">
+						<span class="shoping_cart_detail_content1_all_css" id="allPrice">¥850.00</span>
+					</div>
+					<div class="shoping_cart_detail_content1_delete">
+						
+					</div>
+					</div>
+					<div class="shoping_cart_detail_content2">
+						<div class="shoping_cart_detail_content2_title">
+							<div class="shoping_cart_detail_content2_title_text1">
+							<span class="shoping_cart_detail_content2_title_text1_1">	订单总计</span>
+							<span class="shoping_cart_detail_content2_title_text1_2" id="total_price">¥850.00</span>
+							</div>
+							
+							<div class="detail_buttom">
+								
+						<div class="detail_buttom1">
+							<a href="Settlement.html" class="a1"><input type="submit" class="detail_buttom11" value="结算" />
+							</a>
+						</div>
+						<div class="detail_buttom2">
+							<a href="index.html" class="a1"> 
+							<input type="submit" class="detail_buttom22" value="继续购物"  />
+							</a>
+						</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		<!--页脚-->
+		<footer class="footer">
+				<div class="footer_first">
+					<div class="logo2"></div>
+					<div class="footer_first_user1">
+						<p class="footer_first_user11">登录/注册</p>
+						<p class="footer_first_user11">说出你想要的</p>
+						<p class="footer_first_user11">门店位置</p>
+						<p class="footer_first_user11">帮助</p>
+					</div>
+					<div class="footer_first_user2">
+						<div class="footer_first_user22"><p>扫码关注官方微信</p><img src="img/footer-qrCode-btn.jpg" class="footer-qrCode-btn" /> </div>
+						<div class="footer_first_user22"><p>扫码下载NBA官方APP</p><img src="img/footer-qrCode-btn.jpg" class="footer-qrCode-btn" /> </div>
+					</div>
+					<div class="footer_first_user3">
+						<p class="footer_first_user33">联系我们</p>
+						<p class="footer_first_user33">service@nbastore.cn</p>
+						<p class="footer_first_user33">400-0066-802（9:00 – 22:00）</p>
+						<p class="footer_first_user33">在线客服（9:00 – 22:00）</p>
+						<p class="footer_first_user33">NBASTORE官方微博</p>
+					</div>
+					
+				</div>
+		
+				
+				</footer>
+		
+		
+		
+		
+	</body>
+</html>

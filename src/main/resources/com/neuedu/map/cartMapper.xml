@@ -1,0 +1,35 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.dao.CartDao">
+    
+    
+    <insert id="addCart" parameterType="com.neuedu.entity.Cart" statementType="PREPARED" keyColumn="cartid" keyProperty="cartid" useGeneratedKeys="true">
+
+  insert into cart(num,product_id,quantity)  values(#{cart_no},#{product.productid},#{quantity})
+
+  </insert>
+
+    <resultMap id="cart-product" type="com.neuedu.entity.Cart" autoMapping="true">
+        <id property="cartid" column="cartid"></id>
+
+
+<association property="product" column="product_id" javaType="com.neuedu.entity.Product" autoMapping="true">
+
+    <id property="productid" column="productid"></id>
+
+
+</association>
+
+
+    </resultMap>
+    <select id="findAllCart" resultMap="cart-product">
+
+  select c.num AS cart_no,c.cartid AS id, c.product_id  productid, c.quantity  ,p.pname,p.detail,p.image,p.stock,p.price from cart c  left join product p on c.product_id=p.productid
+
+
+    </select>
+
+
+
+</mapper>

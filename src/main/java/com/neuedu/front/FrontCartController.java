@@ -47,7 +47,7 @@ public class FrontCartController extends HttpServlet {
 		Gson gson=new Gson();
 		String json=gson.toJson(list); 
 		PrintWriter write=response.getWriter();
-		write.println(method+"("+json+")");
+		write.println(json);
 		
 	}
 

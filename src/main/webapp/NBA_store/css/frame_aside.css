@@ -1,0 +1,37 @@
+
+	.side_list{
+		width: 245px;
+		height: 304px;
+		color: #FFFFFF;
+		padding-top:35px;
+		padding-bottom: 45px;
+		
+		position: relative;
+		left: 10%;
+   background-color: #393f48;
+	}
+	
+	.li2{
+		width: 184px;
+		height: 60px;
+		cursor: pointer;
+		text-align: left;
+		
+		
+		border-bottom:1px solid #5e646c ;
+		
+		
+		
+		
+		
+		
+	}
+	.a3{
+		text-decoration: none;
+		margin-left: 20px;
+		color: white;
+		font-size: 16px;
+		    line-height: 60px
+		
+		
+	}

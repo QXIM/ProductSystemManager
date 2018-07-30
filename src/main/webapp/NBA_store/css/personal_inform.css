@@ -1,0 +1,24 @@
+.personal_inform_title{
+	width: 
+	400px;
+	height: 40px;
+	margin-bottom: 20px;
+			border-bottom: 1px solid black;
+			
+	
+}
+.personal_inform_side{
+	list-style: none;
+	
+	
+}
+.personal_inform_content{
+	margin-bottom:20px;
+}
+.personal_inform_bottom{
+	width: 163px;
+	height: 40px;
+	background: #002c4f;
+	border: 0px;
+	color: white;
+}

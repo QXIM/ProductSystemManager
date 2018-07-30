@@ -1,0 +1,74 @@
+	
+/*页脚*/
+		.footer{
+			width: 1800px;
+			height: 408px;
+			background:#0a3665;
+			position: relative;
+			
+		}
+		.footer_first{
+			width: 1200px;
+			height: 260px;
+			background: ;
+			position: absolute;
+			left: 5%;
+			padding-top:40px ;
+			padding-bottom:20px ;
+		}
+		.logo2{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}	
+		.footer_first_user1{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 267px;
+		color:white;
+		}
+		.footer_first_user11{
+		width: 280px;
+		height: 30px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer_first_user2{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 600px;
+		color:white;
+		}	
+		.footer_first_user22{
+		width: 280px;
+		height: 80px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer-qrCode-btn{
+			width: 48px;
+			height: 48px;
+			border: 1px;
+			margin-top:8px ;
+		}
+		.footer_first_user3{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		right:0px;
+		color:white;
+		}	
+		.footer_first_user33{
+		width: 280px;
+		height: 37px;
+		
+		position: relative;
+		}

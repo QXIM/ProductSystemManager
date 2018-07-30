@@ -2,6 +2,7 @@ package com.neuedu.serviceImpl;
 
 import java.util.List;
 
+import com.neuedu.MyBatis.MyBatisCartImpl;
 import com.neuedu.dao.CartDao;
 import com.neuedu.daoImpl.CartDaoImpl;
 import com.neuedu.daoImpl.CartDaoImpl2;
@@ -9,7 +10,7 @@ import com.neuedu.entity.Cart;
 import com.neuedu.service.CartService;
 
 public class CartServiceImpl implements CartService {
-	CartDao cartdao=new CartDaoImpl2();
+	CartDao cartdao=new MyBatisCartImpl();
 	@Override
 	public boolean addCart(Cart Cart) {
 		// TODO Auto-generated method stub

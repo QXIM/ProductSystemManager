@@ -46,7 +46,12 @@ public class CheckLogin implements Filter {
 		System.out.println(session.getMaxInactiveInterval());
 		Object o=session.getAttribute("token");
 		Object user_obj=session.getAttribute("user");
-		
+
+
+
+
+
+
 		
 		if(o!=null&&user_obj!=null) {
 			String _session=(String)o;
@@ -54,7 +59,12 @@ public class CheckLogin implements Filter {
 			System.out.println("guolv="+_user);
 			UserService userservice=new UserServiceImpl();
 			String _token= userservice.findToken(_user.getAccountid());
-			
+
+
+
+
+
+
 			if(_token!=null) {
 			if(_session.equals(_token)) {
 				chain.doFilter(request, response);
@@ -68,34 +78,12 @@ public class CheckLogin implements Filter {
 
 
 
-/*
 
 
-		HttpServletRequest request = (HttpServletRequest)_request;
-		HttpServletResponse response = (HttpServletResponse) _response;
-		//得到会话域,服务器会根据已写到浏览器的JESSIONID查询到这个会话并加入到会话
-		HttpSession session = request.getSession();
 
-		Object o = session.getAttribute("token");
-		Object o1 = session.getAttribute("acc");
 
-		if(o!=null&&o1!=null) {
-			String token = (String) o;
-			Account account = (Account) o1;
-			LoginService ls = new LoginServiceImpl();
-			String data_token = ls.findTokenByAccountId(account.getId());
-			if(data_token!=null) {
-				if(token.equals(data_token)) {
-					//有效的token
-					chain.doFilter(request, response);
-					return;
-				}
-			}
 
-		}
 
-		response.sendRedirect("http://localhost:8080/Serverlet01/Login.jsp");
-*/
 
 
 

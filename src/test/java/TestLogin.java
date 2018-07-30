@@ -1,9 +1,6 @@
 import com.neuedu.MyBatis.*;
 import com.neuedu.dao.*;
-import com.neuedu.entity.Category;
-import com.neuedu.entity.Order;
-import com.neuedu.entity.OrderItem;
-import com.neuedu.entity.Product;
+import com.neuedu.entity.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -108,7 +105,7 @@ public class TestLogin {
 
     }
 
-    @Test
+
     public void testFindAllOrder(){
         OrderDao orderdao=new MyBatisOrderImpl();
         orderdao.findAll();
@@ -117,7 +114,7 @@ public class TestLogin {
     }
 
 
-    @Test
+
     public void testFindProductById(){
 
         ProductDao productDao=new MyBatisProductImpl();
@@ -133,6 +130,41 @@ public class TestLogin {
 
     }
 
+    public void testAddCart(){
+
+    CartDao cartDao=new MyBatisCartImpl();
+        Cart cart =new Cart();
+        Product product=new Product(50, "789", "789", 123,"789");
+
+        cart.setQuantity(200);
+        cart.setProduct(product);
+    cartDao.addCart(cart);
+
+    }
+    @Test
+    public void testfindAllCart(){
+        CartDao cartDao=new MyBatisCartImpl();
+        cartDao.findAllCart();
+
+
+    }
+
+
+    /*public void  testAddOrderItemi(){
+    OrderItemDao orderItemDao=new MyBatisOrderItemImpl();
+        Product product=new Product(50, "789", "789", 123,"789");
+        List<Product>
+        List<OrderItem> list=new ArrayList<OrderItem>();
+        list.addAll(cart);
+        orderItemDao.addOrderItem(list);
+
+    }
+*/
+
+
 
 
 }
+
+
+

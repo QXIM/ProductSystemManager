@@ -1,0 +1,622 @@
+	*{
+	padding: 0px;
+	margin: 0px;
+}
+	li{
+		display: inline-block;
+		cursor: pointer;
+	}
+	.a1{
+		color: white;
+		text-decoration: none;
+	}
+
+.head_top{
+	width: 100%;
+	height: 122px;
+	background:#0a3665;
+	position: relative;
+}
+.logo{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	top: 50%;left: 5%;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}	
+	.search{
+	width: 532px;
+	height: 40px;
+	background: ;
+	
+	position: absolute;
+	top: 50%;left: 350px;
+	transform: translateY(-10px);
+	}
+	
+.search2{
+	border-radius: 5px ;
+	width: 532px; height: 40px;
+	position: absolute;
+	
+	}
+.search3{
+	width: 25px;
+	height: 24px;
+	background: url(../img/search-icon.png);
+	position: absolute;
+	top: 50%;right: 0px;
+	transform: translateY(-50%);
+	cursor: pointer;
+	
+	}
+	
+	.tshirt{
+		width: 89px;
+		height: 25px;
+		background: ;
+		position: absolute;
+		top: 50%;
+		right: 25%;
+		text-align: center;
+		cursor: pointer;
+		
+}
+	.txt{
+		text-align: center;
+		font-size: 18px;
+		text-decoration: underline;
+		color: white;
+		
+	}
+	
+	.qiuyi{
+		width: 96px;
+		height: 25px;
+		background: ;
+		position: absolute;
+		top: 50%;
+		right: 16%;
+		text-align: center;
+		cursor: pointer;
+		
+}
+	.user{
+		width: 300px;
+		height: 38px;
+		background: ;
+		position: absolute;
+		right:10%;
+		text-align: center;
+		color: white;
+		font-size: 12px;
+		cursor: pointer;
+		
+	}
+	.head_list{
+		width: 81px;
+		height: 15px;
+		background:  ;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		border-right: 1px solid white;
+		
+	}
+	.head_list2{
+		width: 77px;
+		height: 15px;
+		background: ;
+		position: absolute;
+		top: 50%;left: 81px;
+		transform: translateY(-50%);
+		border-right: 1px solid white;
+	}
+	.head_list3{
+		width: 42px;
+		height: 15px;
+		background:;
+		position: absolute;
+		top: 50%; right: 100px;
+		transform: translateY(-50%) ;
+		border-right: 1px solid white;
+	}
+	.head_list4{
+		width: 100px;
+		height: 15px;
+		background:;
+		position: absolute;
+		top: 50%;right: 0px;
+		transform: translateY(-50%);
+		
+	}
+	
+	.shop_car_logo{
+		width: 43px;
+		height: 38px;
+		
+		position: absolute;
+		left: 0px;
+	}
+	.car_logo{
+		width:16px;
+		height: 14px;
+		position: absolute;
+		left:10px ;
+	}
+	.shop_car_quantity{
+		width: 7.23px;
+		height: 18px;
+		position: absolute;
+		right: 5px;
+		color: red;
+		
+	}
+	.service_logo{
+		width: 15px;
+		height: 16px;
+		background: url(../img/icons.png) -35px -7px no-repeat ;
+		position: absolute;
+		    top: -1px;
+    left: 12px;
+		
+	}
+	.service_txt{
+		width: 52px;
+		height: 15px;
+		position: absolute;
+		right: 10px;
+	}
+	
+	
+	.menu_top{
+		width: 100%;
+		height: 35px;
+		background: #0669b2;
+		position: relative;
+		
+	}
+	.menu_content{
+		width: 1010px;
+		height: 35px;
+		background:;
+		position: absolute;
+		left: 5%;
+		list-style: none;
+		
+		
+		
+	}
+		.inline_block{
+		
+		display: inline-block;
+		text-align: center;
+		margin-right: 25px;
+		
+	}
+	.txt_center{
+		display: inline-block;
+		transform: translateY(5px);
+		color: white;
+		font-size: 15px;
+		font-weight: 900;
+		cursor: pointer;
+		
+		
+		
+	}
+	.choose_team{
+		
+		width: 70px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+		
+		
+		
+		
+	}
+	.choose_logo_contet{
+		width: 92px;
+		height: 35px;
+		background: ;
+		
+		
+	}
+	.nike_logo{
+		width: 60px;
+		height: 26px;
+		
+	}
+	.choose_brand{
+		width: 41px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_all_commodity{
+		width: 69.09px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_jersey{
+		width: 40.55px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_jacket{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_trousers{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_women{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_children{
+		width: 87.27px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_shoes{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_basketball{
+		width: 40.55px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_other{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.txt_center:hover{
+	color: red;
+}
+.inline_block:hover{
+	background: #0A3665;
+}
+	
+	.promise{
+		width: 100%;
+		height: 28px;
+		background: yellow ;
+		position: relative;
+		
+		cursor: pointer;
+	}
+	.promise_content{
+		width: 100%;
+		height: 28px;
+		position: absolute;
+	}
+	/*商品详情*/
+	.detail{
+		width: 1200px;
+		height: 601px;
+		position: relative;
+		background: ;
+		left: 5%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+ 	.detail_lujing{
+ 		height: 20px;
+ 		position: relative;background: ;
+ 		padding-bottom: 20px;
+ 	}
+	.detail_centent{
+		height: 561px;
+		background: ;
+	}
+	.detail_centent_pic{
+		width: 531px;
+		height: 531px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.detail_centent_img{
+		width: 531px;
+		height: 500px;
+		
+	}
+	.detail_centent_txt{
+		width: 531px;
+		height: 561px;
+		background: ;
+		display: inline-block;
+		padding-left: 20px;
+		vertical-align: top;
+	}
+	.p5{
+		
+     color: #58595b;
+    font-size: 12px;
+    padding-bottom: 15px;
+	}
+	.h1{
+		
+    padding-right: 29px;
+    font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        
+	}
+	.p6{
+		color: #00559a;
+		font-size: 24px;
+		padding-bottom: 10px;
+	}
+	.detail_centent_dw{
+		width: 490px;
+		height: 40px;
+		position: relative;
+		
+	}
+	.detail_centent_txt2{
+		height:404px;
+		background:;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: solid black 1px;
+	}
+	.detail_centent_txt222{
+		width: 50px;
+		height: 36px;
+		color: #58595b;
+		display: inline-block;
+		position: absolute;
+		background: ;
+    top: 0;
+    left: 0;
+	}
+	.detail_centent_size_wbj{
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+		background: ;
+		margin-left:60px ;
+	}
+	.detail_centent_size{
+		width:50px;
+		height: 32px;
+		border: 2px solid #d1d3d4;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 12px;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		
+	}
+	.detail_centent_dw2{
+		width: 490px;
+		height: 40px;
+		position: relative;
+		
+	}
+	
+	
+	.detail_centent_many{
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+		background: ;
+		margin-left:60px ;
+	}
+	
+	
+	.detail_centent_low{
+		width: 36px;
+		height: 36px;
+		margin-right:4px ;
+		background: #b4b4b4 url(../img/icons.png) -10px -231px no-repeat ;;
+		display: inline-block;
+    float: left;
+    cursor: pointer
+    
+    
+   
+	}
+	.detail_centent_sl{
+		width: 36px;
+		height: 36px;
+		margin-right:4px ;
+		display: inline-block;
+		float: left;
+		
+	}
+	.shuliang{
+	width: 35px;
+		height: 35px;
+		margin-right:4px ;
+		display: inline-block;
+		text-align: center;
+		font-size: 18px;
+		position: relative;
+		float: left;
+		border: 1px solid #58595b;
+	}
+	.detail_centent_hight{
+		
+	    display: inline-block;
+    
+    width: 36px;
+    height: 36px;
+    background: url(../img/icons.png) -66px -231px no-repeat #00539c;
+    margin-left: px;
+    color: #fff;
+    cursor: pointer;
+    float: left;}
+    .detail_buttom{
+    	width: 345px;
+    	height: 76px;
+    	background: ;
+    	position: relative;
+    	margin-top: 40px;
+    }
+	.detail_buttom1{
+		width: 143px;
+		height: 40px;
+		background: #ba0030;
+		display: inline-block;
+		margin-right:12px;
+		border-radius: 30px;
+		
+	}
+	.detail_buttom11{
+		width: 143px;
+		height: 40px;
+		background: #ba0030;
+		padding-left:10px ;
+		padding-right:10px ;
+		border: 0px;
+		cursor: pointer;
+		color: white;
+		
+		
+	}
+	.detail_buttom2{
+		width: 143px;
+		height: 40px;
+		background: #00559a;
+		display: inline-block;
+		border-radius: 30px;
+		
+	}
+	.detail_buttom22{
+		width: 143px;
+		height: 40px;
+		background: #00559a;
+		padding-left:10px ;
+		padding-right:10px ;
+		border: 0px;
+		cursor: pointer;
+		color: white;
+	
+	}
+	.shuoming{
+		color: #ccc;
+		font-size: 12px;
+		
+	}
+	
+	
+	
+	.detail_txt{
+		width: 1200px;
+		height: 412px;
+		background: ;
+		position: relative;
+		left: 5%;
+		
+	}
+	.detail_txt1{
+		        color: #005faf;
+    font-size: 20px;
+	}
+	.detail_txt2{
+		  color:#333;
+		  font-size:14px ;
+		  
+	}
+	
+	
+	
+	
+	
+	
+		/*页脚*/
+		.footer{
+			width: 100%;
+			height: 408px;
+			background:#0a3665;
+			position: relative;
+			
+		}
+		.footer_first{
+			width: 1200px;
+			height: 260px;
+			background: ;
+			position: absolute;
+			left: 5%;
+			padding-top:40px ;
+			padding-bottom:20px ;
+		}
+		.logo2{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}	
+		.footer_first_user1{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 267px;
+		color:white;
+		}
+		.footer_first_user11{
+		width: 280px;
+		height: 30px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer_first_user2{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 600px;
+		color:white;
+		}	
+		.footer_first_user22{
+		width: 280px;
+		height: 80px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer-qrCode-btn{
+			width: 48px;
+			height: 48px;
+			border: 1px;
+			margin-top:8px ;
+		}
+		.footer_first_user3{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		right:0px;
+		color:white;
+		}	
+		.footer_first_user33{
+		width: 280px;
+		height: 37px;
+		
+		position: relative;
+		}

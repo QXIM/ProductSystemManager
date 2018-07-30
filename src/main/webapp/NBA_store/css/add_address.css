@@ -1,0 +1,56 @@
+	.text_1{
+	width: 464px;
+	height: 38px;
+	margin-left: 40px;
+	}
+	.txt{
+		width: 70px;
+		height: 16px;
+		font-size: 14px;
+		    line-height: 40px;
+	}
+	
+	.list_size{
+		width: 154px;
+		height: 38px;
+	}
+	.text_2{
+		margin-left: 40px;
+	}
+	#add_address{
+		width: 600px;
+		height: 484px;
+		text-align: right;
+	}
+	.checkbox_1{
+		width: 18px;
+		height: 18px;
+		
+		
+	}
+	.checkbox{
+		position: absolute;
+		margin-left: 125px;
+	}
+	.submit{
+		width: 143px;
+		height: 40px;
+		position: relative;
+		margin-top: 40px;
+		
+		
+	}
+	.preservation{
+		background: #00559a;
+		position: relative;
+		color:white;
+		border: 0px;
+		border-radius: 5px;
+		
+	}
+	.cancel{
+		color: #00559A;
+		border: #00559a solid 2px;
+		background: white;
+		border-radius: 5px;
+	}

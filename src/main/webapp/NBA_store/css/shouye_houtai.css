@@ -1,0 +1,16 @@
+		
+		.logo{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	top: 50%;left: 5%;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}
+	.head_top{
+	width: 100%;
+	height: 122px;
+	background:#0a3665;
+	position: relative;
+}		

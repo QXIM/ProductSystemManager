@@ -1,5 +1,7 @@
 package com.neuedu.MyBatis;
 
+import com.neuedu.dao.CartDao;
+import com.neuedu.dao.OrderDao;
 import com.neuedu.dao.OrderItemDao;
 import com.neuedu.entity.MyBatis;
 import com.neuedu.entity.OrderItem;
@@ -14,22 +16,10 @@ public class MyBatisOrderItemImpl implements OrderItemDao {
         Integer result=0;
         SqlSession session;
         SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
-
         session = sqlMapper.openSession(true);
-
-        for(int i=0;i<orderItem.size();i++){
-            OrderItem orderItems=orderItem.get(i);
-            result=session.insert("com.neuedu.entity.OrderItem.addOrderItem",orderItems);
-
-            System.out.println(result);
-
-        }
-        MyBatis.close(session);
-        if(result==1){
-            return true;
-        }else{
-            return false;
-        }
+        OrderItemDao orderItemDao=session.getMapper(OrderItemDao.class);
+        orderItemDao.addOrderItem(orderItem);
+       return false;
 
 
 

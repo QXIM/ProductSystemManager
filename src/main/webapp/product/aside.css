@@ -6,13 +6,14 @@
 ::-webkit-scrollbar{
 	display: none;
 }
+
 .side_list{
 	width: 245px;
 	height: 360px;
 	color: #FFFFFF;
 	padding-top:35px;
 	padding-bottom: 45px;
-border-radius: 5px;
+	border-radius: 5px;
 	position: relative;
 	left: 10%;
 	background-color: #393f48;

@@ -1,0 +1,583 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	word-break: normal;
+}
+	li{
+		display: inline-block;
+		cursor: pointer;
+	}
+
+.head_top{
+	width: 100%;
+	height: 122px;
+	background:#0a3665;
+	position: relative;
+}
+.logo{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	top: 50%;left: 5%;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}	
+	.search{
+	width: 532px;
+	height: 40px;
+	background: ;
+	
+	position: absolute;
+	top: 50%;left: 350px;
+	transform: translateY(-10px);
+	}
+	
+.search2{
+	border-radius: 5px ;
+	width: 532px; height: 40px;
+	position: absolute;
+	
+	}
+.search3{
+	width: 25px;
+	height: 24px;
+	background: url(../img/search-icon.png);
+	position: absolute;
+	top: 50%;right: 0px;
+	transform: translateY(-50%);
+	cursor: pointer;
+	
+	}
+	
+	.tshirt{
+		width: 89px;
+		height: 25px;
+		background: ;
+		position: absolute;
+		top: 50%;
+		right: 25%;
+		text-align: center;
+		cursor: pointer;
+		
+}
+	.txt{
+		text-align: center;
+		font-size: 18px;
+		text-decoration: underline;
+		color: white;
+		
+	}
+	
+	.qiuyi{
+		width: 96px;
+		height: 25px;
+		background: ;
+		position: absolute;
+		top: 50%;
+		right: 16%;
+		text-align: center;
+		cursor: pointer;
+		
+}
+	.user{
+		width: 300px;
+		height: 38px;
+		background: ;
+		position: absolute;
+		right:10%;
+		text-align: center;
+		color: white;
+		font-size: 12px;
+		cursor: pointer;
+		
+	}
+	.head_list{
+		width: 81px;
+		height: 15px;
+		background:  ;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		border-right: 1px solid white;
+		
+	}
+	.head_list2{
+		width: 77px;
+		height: 15px;
+		background: ;
+		position: absolute;
+		top: 50%;left: 81px;
+		transform: translateY(-50%);
+		border-right: 1px solid white;
+	}
+	.head_list3{
+		width: 42px;
+		height: 15px;
+		background:;
+		position: absolute;
+		top: 50%; right: 100px;
+		transform: translateY(-50%) ;
+		border-right: 1px solid white;
+	}
+	.head_list4{
+		width: 100px;
+		height: 15px;
+		background:;
+		position: absolute;
+		top: 50%;right: 0px;
+		transform: translateY(-50%);
+		
+	}
+	
+	.shop_car_logo{
+		width: 43px;
+		height: 38px;
+		
+		position: absolute;
+		left: 0px;
+	}
+	.car_logo{
+		width:16px;
+		height: 14px;
+		position: absolute;
+		left:10px ;
+	}
+	.shop_car_quantity{
+		width: 7.23px;
+		height: 18px;
+		position: absolute;
+		right: 5px;
+		color: red;
+		
+	}
+	.service_logo{
+		width: 15px;
+		height: 16px;
+		background: url(../img/icons.png) -35px -7px no-repeat ;
+		position: absolute;
+		    top: -1px;
+    left: 12px;
+		
+	}
+	.service_txt{
+		width: 52px;
+		height: 15px;
+		position: absolute;
+		right: 10px;
+	}
+	
+	
+	.menu_top{
+		width: 100%;
+		height: 35px;
+		background: #0669b2;
+		position: relative;
+		
+	}
+	.menu_content{
+		width: 1010px;
+		height: 35px;
+		background:;
+		position: absolute;
+		left: 5%;
+		list-style: none;
+		
+		
+		
+	}
+		.inline_block{
+		
+		display: inline-block;
+		text-align: center;
+		margin-right: 25px;
+		
+	}
+	.txt_center{
+		display: inline-block;
+		transform: translateY(5px);
+		color: white;
+		font-size: 15px;
+		font-weight: 900;
+		cursor: pointer;
+		
+		
+		
+	}
+	.choose_team{
+		
+		width: 70px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+		
+		
+		
+		
+	}
+	.choose_logo_contet{
+		width: 92px;
+		height: 35px;
+		background: ;
+		
+		
+	}
+	.nike_logo{
+		width: 60px;
+		height: 26px;
+		
+	}
+	.choose_brand{
+		width: 41px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_all_commodity{
+		width: 69.09px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_jersey{
+		width: 40.55px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_jacket{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_trousers{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_women{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_children{
+		width: 87.27px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_shoes{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.choose_basketball{
+		width: 40.55px;
+		height: 35px;
+		background: ;
+		transform: translateY(-10px);
+	}
+	.choose_other{
+		width: 40.55px;
+		height: 35px;
+		background:;
+		transform: translateY(-10px);
+	}
+	.txt_center:hover{
+	color: red;
+}
+.inline_block:hover{
+	background: #0A3665;
+}
+/*登录页面*/
+	.sign_in_all{
+		width: 100%;
+		height: 660px;
+		background:;
+		position: relative;
+		 
+	}
+	.sign_in{
+		width:1200px ;
+		height: 660px;
+		background:;
+		position: absolute;
+		left: 5%;
+	}
+	.sign_in_title{
+		width:1200px ;
+		height: 28px;
+		background: ;
+		padding-top:34px ;
+		padding-bottom: 20px;
+		
+	}
+	.sign_in_title_txt{
+		font-size: 28px;
+    color: #00559a;
+   }
+	.sign_in_content{
+		width: 1200px;
+		height: 577px;
+		background: ;
+		display: inline-block;
+	}
+	.sign_in_content1{
+		width: 476px;
+		height: 452px;
+		background: ;
+		position: relative;
+		padding-right:40px ;
+		display: inline-block;
+		    vertical-align: top;
+		    padding-top:30px ;
+		
+	}
+	
+	.p1{
+		height:18px;
+		font-size: 18px;
+    	color: #00539c;
+    	margin-bottom:10px ;
+	}
+	.p2{
+		height: 14px;
+		
+		    font-size: 14px;
+    line-height: 14px;
+    color: #939090;
+    margin-bottom: 10px;
+	}
+	.p3{
+		height: 14px;
+		
+		    font-size: 14px;
+    line-height: 14px;
+    color: #939090;
+    margin-bottom: 34px;
+	}
+	.phone_number{
+		
+    font-size: 14px;
+    
+    color: #000;
+    
+    text-align: right;
+    margin-bottom:30px ;
+    
+    
+    
+		
+	}
+	.biaodan{
+		width: 260px;
+		height: 40px;
+		padding-left: 13px;
+		padding-right: 50px;
+		
+	}	
+	/*登录NBA账号*/
+	/*control_label{
+		
+		    width: 110px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #000;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: right;
+    font-weight: normal;
+    margin: 0;
+		
+	}*/
+	/*.NBA_number{
+		display: block;
+	}
+	*/
+	
+	.form_group{
+		height: 32px;
+		
+	}
+	.forget_password{
+		color: #000000;
+		padding-right:150px ;
+		padding-left:150px ;
+		padding-bottom:30px ;
+	}
+	.fuxuan{ width: 18px;height: 18px;"
+	}
+		.ok{
+			text-align: right;
+		}
+	.denglu{
+		
+		background: #0A3665;
+		color:white ;
+		border: 0px;
+		border-radius: 5px;
+		width: 163px;
+		height: 40px;
+		padding-left:10px ;
+		padding-right:10px ;
+		
+		
+	}
+	.sign_in_other_choose{
+		width: 260px;
+		height: 48px;
+		background: ;
+		padding-top: 24px;
+		text-align: right;
+		float: right;
+		
+	}
+	.img_login_icon_qq{
+		width: 24px;
+		height: 18px;
+		background: url(../img/login_icon.png) 0 -162px no-repeat;
+		display: inline-block;
+    width: 24px;
+    height: 18px;	
+	}
+	.img_login_icon_weibo{
+		width: 24px;
+		height: 18px;
+		background: url(../img/login_icon.png) 0 -200px no-repeat;
+		display: inline-block;
+    width: 24px;
+    height: 18px;}
+    	
+	.img_login_icon_zhifubao{
+		width: 24px;
+		height: 18px;
+		background: url(../img/login_icon.png) 0 -238px no-repeat;
+		display: inline-block;
+    width: 24px;
+    height: 18px;		
+	}	
+	
+	/*注册页面*/
+		.sign_in_content2{
+		width: 450px;
+		height: 577px;
+		background:#f6f6f6 ;
+		position: relative;
+		padding-left:43px ;
+		padding-right: 43px;
+		display: inline-block;
+		    vertical-align: top;
+	}
+		.zhuce_title{
+			width: 420px;
+			height: 52px;
+			padding-top: 30px;
+			padding-bottom: 24px;
+			
+		}
+		.p4{
+			font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #e30543;
+    margin-bottom: 10px;
+		}
+		.zhucebiaodan{
+			text-align: right;
+		}
+		.promise2{
+			width: 500px;
+			height: 34px;
+			padding-left:27px ;
+			padding-right: 10px;
+			float: right;
+		}
+		
+
+
+
+
+
+
+
+			/*页脚*/
+		.footer{
+			width: 100%;
+			height: 408px;
+			background:#0a3665;
+			position: relative;
+			
+		}
+		.footer_first{
+			width: 1200px;
+			height: 260px;
+			background: ;
+			position: absolute;
+			left: 5%;
+			padding-top:40px ;
+			padding-bottom:20px ;
+		}
+		.logo2{
+	width: 218px;
+	height: 58px;
+	background: url(../img/logo_cn.png) ;
+	position: absolute;
+	transform: translateY(-20%);
+	cursor: pointer;
+	}	
+		.footer_first_user1{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 267px;
+		color:white;
+		}
+		.footer_first_user11{
+		width: 280px;
+		height: 30px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer_first_user2{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		left: 600px;
+		color:white;
+		}	
+		.footer_first_user22{
+		width: 280px;
+		height: 80px;
+		padding-bottom:20px ;
+		position: relative;
+		}
+		.footer-qrCode-btn{
+			width: 48px;
+			height: 48px;
+			border: 1px;
+			margin-top:8px ;
+		}
+		.footer_first_user3{
+		width: 280px;
+		height: 200px;
+		background: ;
+		position: absolute;
+		right:0px;
+		color:white;
+		}	
+		.footer_first_user33{
+		width: 280px;
+		height: 37px;
+		
+		position: relative;
+		}
