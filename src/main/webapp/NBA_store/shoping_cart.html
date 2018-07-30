@@ -21,17 +21,18 @@
 				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findAllCart',
 				dataType:'json',
 				success : function (result) {
-				    alert("1223")
-					$("#num").val("123")
+
+
                     $.each(result,function(i,e) {
-						$("#pname").text("12345132")
-						$("#rule").html(e.procuct.rule)
-						$("#detail").html(e.procuct.detail)
-					var price=$("#price").html(e.procuct.price)
-					/*var num=	$("#num").val("10")
-					var allPrice=$("#allPrice").html(price*num)*/
+						$("#pname").text(e.product.pname)
+						$("#rule").text(e.product.rule)
+						$("#detail").text(e.product.detail)
+					var price=$("#price").text(e.product.price)
+					var num=	$("#num").val("10")
+					var allPrice=$("#allPrice").text(price*num)
 
 
+                        $(".shoping_cart_detail_content").append(div).addClass(shoping_cart_detail_content1)
                     })
 
                 }

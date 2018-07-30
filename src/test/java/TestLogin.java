@@ -29,7 +29,7 @@ public class TestLogin {
     }
 
     public void testUpdateProduct(){
-        Product product=new Product(50, "789", "789", 123,"789");
+        Product product=new Product(50, "789", "789", 123,"789","200");
         ProductDao productDao=new MyBatisProductImpl();
         productDao.updateProduct(product);
     }
@@ -134,7 +134,7 @@ public class TestLogin {
 
     CartDao cartDao=new MyBatisCartImpl();
         Cart cart =new Cart();
-        Product product=new Product(50, "789", "789", 123,"789");
+        Product product=new Product(50, "789", "789", 123,"789","20");
 
         cart.setQuantity(200);
         cart.setProduct(product);

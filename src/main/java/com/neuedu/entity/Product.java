@@ -12,6 +12,7 @@ public class Product implements Serializable{
 		this.price = price;
 		this.stock = stock;
 		this.image = image;
+
 	}
 	/**
 	 * 
@@ -23,12 +24,27 @@ public class Product implements Serializable{
 		this.stock = stock;
 	}
 	private static final long serialVersionUID = -8794185251517382884L;
+
+	@Override
+	public String toString() {
+		return "Product{" +
+				"productid=" + productid +
+				", pname='" + pname + '\'' +
+				", detail='" + detail + '\'' +
+				", price=" + price +
+				", stock=" + stock +
+				", image='" + image + '\'' +
+				", rule='" + rule + '\'' +
+				'}';
+	}
+
 	private int productid;
 	private String pname;
 	private String detail;
 	private double price;
 	private int stock;
 	private String image;
+	private String rule;
 	public Product( String pname, String detail, double price, int stock, String image) {
 		super();
 		this.pname = pname;
@@ -70,14 +86,24 @@ public class Product implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public Product(int productid, String pname, String detail, double price,String image) {
+
+	public void setRule(String rule) {
+		this.rule = rule;
+	}
+
+	public String getRule() {
+		return rule;
+	}
+
+	public Product(int productid, String pname, String detail, double price, String image,String rule) {
 		super();
 		this.productid = productid;
 		this.pname = pname;
 		this.detail = detail;
 		this.price = price;
 		this.image=image;
-	
+		this.rule=rule;
+
 	}
 	public Product( String pname, String detail, double price,String image) {
 		super();
@@ -88,10 +114,7 @@ public class Product implements Serializable{
 		this.image=image;
 	
 	}
-	@Override
-	public String toString() {
-		return "商品 [商品id=" + productid + ", 商品名称=" + pname + ", 商品详细=" + detail + ", 商品价格=" + price +  ", 商品库存=" + stock +"]";
-	}
+
 	public Product() {
 		super();
 	}
