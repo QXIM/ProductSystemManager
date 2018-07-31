@@ -11,4 +11,8 @@ insert into orders( user_id,shipping_id,order_no,payment_type,postage,status,pay
         select * from orders;
     </select>
 
+
+
+
+
 </mapper>

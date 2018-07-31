@@ -30,8 +30,7 @@
 	.search{
 	width: 532px;
 	height: 40px;
-	background: ;
-	
+
 	position: absolute;
 	top: 50%;left: 350px;
 	transform: translateY(-10px);
@@ -57,7 +56,7 @@
 	.tshirt{
 		width: 89px;
 		height: 25px;
-		background: ;
+
 		position: absolute;
 		top: 50%;
 		right: 25%;
@@ -76,7 +75,7 @@
 	.qiuyi{
 		width: 96px;
 		height: 25px;
-		background: ;
+
 		position: absolute;
 		top: 50%;
 		right: 16%;
@@ -87,7 +86,7 @@
 	.user{
 		width: 300px;
 		height: 38px;
-		background: ;
+
 		position: absolute;
 		right:10%;
 		text-align: center;
@@ -99,7 +98,7 @@
 	.head_list{
 		width: 81px;
 		height: 15px;
-		background:  ;
+
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -110,7 +109,7 @@
 	.head_list2{
 		width: 77px;
 		height: 15px;
-		background: ;
+
 		position: absolute;
 		top: 50%;left: 81px;
 		transform: translateY(-50%);
@@ -119,7 +118,7 @@
 	.head_list3{
 		width: 42px;
 		height: 15px;
-		background:;
+
 		position: absolute;
 		top: 50%; right: 100px;
 		transform: translateY(-50%) ;
@@ -128,7 +127,7 @@
 	.head_list4{
 		width: 100px;
 		height: 15px;
-		background:;
+
 		position: absolute;
 		top: 50%;right: 0px;
 		transform: translateY(-50%);
@@ -183,7 +182,7 @@
 	.menu_content{
 		width: 1010px;
 		height: 35px;
-		background:;
+
 		position: absolute;
 		left: 5%;
 		list-style: none;
@@ -213,7 +212,7 @@
 		
 		width: 70px;
 		height: 35px;
-		background: ;
+
 		transform: translateY(-10px);
 		
 		
@@ -223,7 +222,7 @@
 	.choose_logo_contet{
 		width: 92px;
 		height: 35px;
-		background: ;
+
 		
 		
 	}
@@ -235,61 +234,61 @@
 	.choose_brand{
 		width: 41px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_all_commodity{
 		width: 69.09px;
 		height: 35px;
-		background: ;
+
 		transform: translateY(-10px);
 	}
 	.choose_jersey{
 		width: 40.55px;
 		height: 35px;
-		background: ;
+
 		transform: translateY(-10px);
 	}
 	.choose_jacket{
 		width: 40.55px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_trousers{
 		width: 40.55px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_women{
 		width: 40.55px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_children{
 		width: 87.27px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_shoes{
 		width: 40.55px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.choose_basketball{
 		width: 40.55px;
 		height: 35px;
-		background: ;
+
 		transform: translateY(-10px);
 	}
 	.choose_other{
 		width: 40.55px;
 		height: 35px;
-		background:;
+
 		transform: translateY(-10px);
 	}
 	.txt_center:hover{
@@ -304,7 +303,7 @@
 	.shoping_cart{
 		width: 1200px;
 		height: 800px;
-		background: ;
+
 		position: relative;
 		left: 5%;
 	}
@@ -313,7 +312,7 @@
 		height: 28px;
 		padding-top: 50px;
 		position: relative;
-		background: ;
+
 	}
 	.shoping_cart_title_txt{
 		    font-size: 28px;
@@ -328,7 +327,7 @@
 		position: relative;
 		padding-top: 8px;
 		padding-bottom: 8px;
-		background: ;
+
 		text-align: right;
 	}
 	.choose_buttom{
@@ -350,7 +349,7 @@
 	.shoping_cart_detail{
 		width: 1200px;
 		height: 310px;
-		background: ;
+
 		
 		
 	}
@@ -365,32 +364,32 @@
 	.shoping_cart_detail_title1{
 		width: 500px;
 		height: 50px;
-		background: ;
+
 		display: inline-block;
 		
 	}
 	.shoping_cart_detail_title2{
 		width: 160px;
 		height: 50px;
-		background:;
+
 		display: inline-block;
 	}
 	.shoping_cart_detail_title3{
 		width: 190px;
 		height: 50px;
-		background: ;
+
 		display: inline-block;
 	}
 	.shoping_cart_detail_title4{
 		width: 200px;
 		height: 50px;
-		background: ;
+
 		display: inline-block;
 	}
 	.shoping_cart_detail_title5{
 		width: 130px;
 		height: 50px;
-		background: ;
+
 		display: inline-block;
 	}
 	.shoping_cart_detail_title_span{
@@ -405,19 +404,19 @@
 	.shoping_cart_detail_content{
 		width: 1200px;
 		height: 250px;
-		background: ;
+
 	}
 	.shoping_cart_detail_content1{
 		width: 1200px;
 		height: 120px;
-		background: ;
+
 		margin-top: 10px;
 		position: relative;
 	}
 	.shoping_cart_detail_content1_buttom{
 		width: 50px;
 		height: 110px;
-		background: ;
+
 		display: inline-block;
 	}
 	.shoping_cart_detail_content1_buttom_css{
@@ -444,21 +443,21 @@
 	.shoping_cart_detail_content1_txt{
 		width: 300px;
 		height: 90px;
-		background: ;
+
 		display: inline-block;
 		position: relative;
 	}
 	.shoping_cart_detail_content1_txt1{
 		width: 100%;
 		height: 32px;
-		background: ;
+
 		position: absolute;
 		font-size: 14px;
 		
 	}
 	.shoping_cart_detail_content1_txt2{
 		
-		background: ;
+
 		position: absolute;
 		bottom: 0px;
 	}
@@ -471,7 +470,7 @@
 	.shoping_cart_detail_content1_money{
 		width: 150px;
 		height: 66px;
-		background: ;
+
 		display: inline-block;
 		margin-left: 40px;
 		position: relative;
@@ -492,7 +491,7 @@
 		width: 140px;
 		height: 80px;
 		display: inline-block;
-		background: ;
+
 		margin-left:40px ;
 		
 	}
@@ -537,14 +536,14 @@
     width: 36px;
     height: 36px;
     background: url(../img/icons.png) -66px -231px no-repeat #00539c;
-    margin-left: px;
+
     color: #fff;
     cursor: pointer;
     float: left;}
     	.shoping_cart_detail_content1_all{
 		width: 150px;
 		height: 66px;
-		background: ;
+
 		display: inline-block;
 		margin-left: 40px;
 		position: relative;
@@ -578,14 +577,14 @@
 .shoping_cart_detail_content2{
 	width: 1200px;
 	height: 193px;
-	background: ;
+
 	position: relative;
 	top: 100%;
 }
 .shoping_cart_detail_content2_title{
 	width: 350px;
 	height: 188px;
-	background: ;
+
 	float: right;
 	position: relative;
 }
@@ -594,7 +593,7 @@
 	height: 32px;
 	position: relative;
 	
-	background: ;
+
 	
 	margin: 10px 0 20px 0 ;
 	
@@ -626,7 +625,7 @@
 	width: 175px;
 	height: 40px;
 	
-	background: ;
+
 	position: relative;
 	    width: 100%;
     float: left;
@@ -691,7 +690,7 @@
 		.footer_first{
 			width: 1200px;
 			height: 260px;
-			background: ;
+
 			position: absolute;
 			left: 5%;
 			padding-top:40px ;
@@ -708,7 +707,7 @@
 		.footer_first_user1{
 		width: 280px;
 		height: 200px;
-		background: ;
+
 		position: absolute;
 		left: 267px;
 		color:white;
@@ -722,7 +721,7 @@
 		.footer_first_user2{
 		width: 280px;
 		height: 200px;
-		background: ;
+
 		position: absolute;
 		left: 600px;
 		color:white;
@@ -742,7 +741,7 @@
 		.footer_first_user3{
 		width: 280px;
 		height: 200px;
-		background: ;
+
 		position: absolute;
 		right:0px;
 		color:white;
@@ -752,4 +751,13 @@
 		height: 37px;
 		
 		position: relative;
+		}
+
+.contentcss{
+	height: 120px;
+	width: 1200px;
+    margin-bottom: 20px;
+	background-color: #0669b2;
+
+
 		}

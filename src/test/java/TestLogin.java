@@ -150,7 +150,7 @@ public class TestLogin {
     }
 
 
-    /*public void  testAddOrderItemi(){
+   /* public void  testAddOrderItemi(){
     OrderItemDao orderItemDao=new MyBatisOrderItemImpl();
         Product product=new Product(50, "789", "789", 123,"789");
         List<Product>
@@ -158,13 +158,23 @@ public class TestLogin {
         list.addAll(cart);
         orderItemDao.addOrderItem(list);
 
+    }*/
+
+    public static void main(String []args){
+
+
+
     }
-*/
+
+
+
+
 
 
 
 
 }
+
 
 
 

@@ -1,6 +1,7 @@
 package com.neuedu.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Order implements Serializable {
 	
@@ -17,6 +18,7 @@ public class Order implements Serializable {
 	private long order_no;
 	private long create_time;
 	private double payment;
+	private List<OrderItem> orderItemList;
 
 	@Override
 	public String toString() {

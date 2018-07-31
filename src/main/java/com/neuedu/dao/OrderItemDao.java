@@ -8,14 +8,16 @@ public interface OrderItemDao {
 	
 			//��
 			boolean addOrderItem(List<OrderItem> orderItem);
-			//�鿴
-			List<OrderItem> findAll();
-			//ɾ��
-			boolean deleteOrderItem(int id);
-			//�޸�
-			boolean updateOrderItem(OrderItem orderItem);
-		
-			int idBySize();
+	//�鿴
+	List<OrderItem> findAll();
+	//ɾ��
+	boolean deleteOrderItem(int id);
+	//�޸�
+	boolean updateOrderItem(OrderItem orderItem);
+
+	int idBySize();
+
+	List<OrderItem> findOrderItemByOrderNo(Long order_no);
 	
 	
 	

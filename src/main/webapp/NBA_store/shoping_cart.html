@@ -15,24 +15,104 @@
 		<script>
 			
 			$(function (){
-			alert("123")
+
+                /*$(".shoping_cart_detail_content1").load("shop_cart_content.html")*/
+
 			$.ajax({
 				type:'get',
 				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findAllCart',
 				dataType:'json',
 				success : function (result) {
 
-
                     $.each(result,function(i,e) {
-						$("#pname").text(e.product.pname)
-						$("#rule").text(e.product.rule)
-						$("#detail").text(e.product.detail)
-					var price=$("#price").text(e.product.price)
-					var num=	$("#num").val("10")
-					var allPrice=$("#allPrice").text(price*num)
+
+                        /*var checkbox=$("<input type='checkbox'>")
+                        checkbox.addClass("shoping_cart_detail_content1_buttom_css")
+						var a=$("<div></div>")
+						a.addClass("shoping_cart_detail_content1_buttom")
+						a.append(checkbox)
+						var image=$("<img src='img/james_548X548.jpg' >")
+                        image.addClass("shoping_cart_detail_content1_pic_css")
+                        var b=$("<div></div>")
+						b.addClass("shoping_cart_detail_content1_pic")
+                        b.append(image)
+
+						var pname=$("<p></p>")
+						pname.addClass("shoping_cart_detail_content1_txt1")
+
+                        var c=$("<div></div>")
+						c.append(pname)
+						var rule=$("<p></p>")
+						rule.addClass("shoping_cart_detail_content1_txt2_2")
+
+                        var detail=$("<p></p>")
+                        detail.addClass("shoping_cart_detail_content1_txt2_2")
+
+						var d=$("<div></div>")
+						d.append(rule)
+						d.append(detail)
+						c.append(d)
+
+                        var price=$("<p></p>")
+                        price.addClass("shoping_cart_detail_content1_money")
+
+                        var e=$("<div></div>")
+                        e.append(price)
 
 
-                        $(".shoping_cart_detail_content").append(div).addClass(shoping_cart_detail_content1)
+
+                        var f=$("<div></div>")
+                        f.addClass("detail_centent_low")
+
+
+
+                        var num=$("<input>")
+                        num.addClass("detail_centent_sl")
+
+                        var g=$("<div></div>")
+                        g.addClass("detail_centent_sl")
+						g.append(num)
+
+                        var h=$("<div></div>")
+                        h.addClass("detail_centent_hight")
+
+
+                        var allPrice=$("<p></p>")
+                        allPrice.addClass("shoping_cart_detail_content1_all_css")
+
+                        var i=$("<div></div>")
+						i.addClass("shoping_cart_detail_content1_all")
+                        i.append(allPrice)
+
+                        $(".shoping_cart_detail_content1").append(a)
+                        $(".shoping_cart_detail_content1").append(b)
+                        $(".shoping_cart_detail_content1").append(c)
+						$(".shoping_cart_detail_content1").append(e)
+                        $(".shoping_cart_detail_content1").append(f)
+                        $(".shoping_cart_detail_content1").append(g)
+                        $(".shoping_cart_detail_content1").append(h)
+                        $(".shoping_cart_detail_content1").append(i)
+
+						$(".shoping_cart_detail_content").append($(".shoping_cart_detail_content1"))
+*/
+
+	var c=$("<div>" +e.product.pname+"     "+e.product.rule+"    "+e.product.detail+"    "+e.product.price+"    "+e.quantity+"    "+((e.product.price)*(e.quantity))+"    "+((e.product.price)*(e.quantity))+"</div>")
+							/*c.addClass("shoping_cart_detail_content1")*/
+							/*$(allPrice).html(e.product.pname)
+                        $("#rule").text(e.product.rule)
+                        $("#detail").text(e.product.detail)
+                        $("#price").text(e.product.price)
+						$("#num").val(e.quantity)
+                        $("#allPrice").text((e.product.price)*(e.quantity))
+						$("#total_price").text((e.product.price)*(e.quantity))*/
+
+
+
+
+                        $(".shoping_cart_detail_content").append(c)
+
+
+
                     })
 
                 }
@@ -175,40 +255,7 @@
 						<span class="shoping_cart_detail_title_span">删除</span> </div>
 				</div>
 				<div class="shoping_cart_detail_content">
-					<div class="shoping_cart_detail_content1">
-						<div class="shoping_cart_detail_content1_buttom">
-							<input type="checkbox" class="shoping_cart_detail_content1_buttom_css" />
-						</div>
-						
-						<div class="shoping_cart_detail_content1_pic">
-						<img src="img/james_548X548.jpg" class="shoping_cart_detail_content1_pic_css" />	
-						</div>
-						
-						<div class="shoping_cart_detail_content1_txt" >
-							<p class="shoping_cart_detail_content1_txt1" id="pname">
-								NBA M&N 骑士队詹姆斯 SW球迷版复刻球衣</p>
-								<div class="shoping_cart_detail_content1_txt2">
-							<p class="shoping_cart_detail_content1_txt2_2" >商品：NMNB17701020012</p>
-							<p class="shoping_cart_detail_content1_txt2_2" id="rule">尺寸：S</p>
-							<p class="shoping_cart_detail_content1_txt2_2" id="detail">颜色：图片色</p>
-							</div>
-						</div>
-						<div class="shoping_cart_detail_content1_money">
-							<span class="shoping_cart_detail_content1_money_css" id="price">¥850.00</span>
-						</div>
-						<div class="shoping_cart_detail_content1_count" >
-							
-					<div class="detail_centent_low"></div>
-					<div class="detail_centent_sl"><input type="text" value="1" class="shuliang"  id="num"/> </div>
-					<div class="detail_centent_hight"></div>
-						</div>
-						<div class="shoping_cart_detail_content1_all">
-						<span class="shoping_cart_detail_content1_all_css" id="allPrice">¥850.00</span>
-					</div>
-					<div class="shoping_cart_detail_content1_delete">
-						
-					</div>
-					</div>
+					<div class="shoping_cart_detail_content1"></div>
 					<div class="shoping_cart_detail_content2">
 						<div class="shoping_cart_detail_content2_title">
 							<div class="shoping_cart_detail_content2_title_text1">

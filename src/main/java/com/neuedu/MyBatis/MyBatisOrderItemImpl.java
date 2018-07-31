@@ -4,6 +4,7 @@ import com.neuedu.dao.CartDao;
 import com.neuedu.dao.OrderDao;
 import com.neuedu.dao.OrderItemDao;
 import com.neuedu.entity.MyBatis;
+import com.neuedu.entity.Order;
 import com.neuedu.entity.OrderItem;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,16 +20,7 @@ public class MyBatisOrderItemImpl implements OrderItemDao {
         session = sqlMapper.openSession(true);
         OrderItemDao orderItemDao=session.getMapper(OrderItemDao.class);
         orderItemDao.addOrderItem(orderItem);
-       return false;
-
-
-
-
-
-
-
-
-        
+       return true;
     }
 
     @Override
@@ -50,4 +42,21 @@ public class MyBatisOrderItemImpl implements OrderItemDao {
     public int idBySize() {
         return 0;
     }
+
+
+    public List<OrderItem> findOrderItemByOrderNo(Long order_no){
+        Integer result=0;
+        SqlSession session;
+        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession(true);
+        OrderItemDao orderItemDao=session.getMapper(OrderItemDao.class);
+        List<OrderItem> list= orderItemDao.findOrderItemByOrderNo(order_no);
+
+            return list;
+    }
+
 }
+
+
+
+

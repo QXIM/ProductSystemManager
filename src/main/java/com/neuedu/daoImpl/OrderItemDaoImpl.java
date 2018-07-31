@@ -39,4 +39,9 @@ public class OrderItemDaoImpl implements OrderItemDao {
 		return 0;
 	}
 
+	@Override
+	public List<OrderItem> findOrderItemByOrderNo(Long order_no) {
+		return null;
+	}
+
 }
