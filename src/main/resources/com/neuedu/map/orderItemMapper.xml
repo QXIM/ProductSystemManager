@@ -13,32 +13,6 @@
 
     </insert>
 
-    <!--result
-
-
-    <select id="findAll" resultMap=""-->
-
-
-
-    <!--<resultMap id="cart-product" type="com.neuedu.entity.Cart" autoMapping="true">
-        <id property="cartid" column="cartid"></id>
-
-
-        <collection property="product" column="product_id" javaType="com.neuedu.entity.Product" autoMapping="true">
-
-            <id property="productid" column="productid"></id>
-
-
-        </collection>
-
-
-    </resultMap>
-    <select id="findAll" resultMap="cart-product">
-
-        select c.num AS cart_no,c.cartid AS id, c.product_id  productid, c.quantity  ,p.pname,p.detail,p.image,p.stock,p.price from cart c  left join product p on c.product_id=p.productid
-    select user_id, orderItem_no,product_id,product_name,product_image,current_unit_price,quantity,total_price,create_time from orderItem o left join product p on
-
-    </select>-->
 
 
 

@@ -51,6 +51,12 @@
 
 
 				<tr class="tr1">
+					<td><span>输入商品规格：</span></td>
+					<td><input type="text" name="rule" /></td>
+
+				</tr>
+
+				<tr class="tr1">
 
 					<td><a href="#" target="caidan" class="a1">
 						<input type="submit" class="detail_buttom22" value="添加商品"  />

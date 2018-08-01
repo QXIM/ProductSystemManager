@@ -37,7 +37,7 @@
     
     <insert id="addProduct" parameterType="com.neuedu.entity.Product">
 
-    insert into product( pname,price,image,stock,detail)  values(#{pname},#{price},#{image},#{stock},#{detail})
+    insert into product( pname,price,image,stock,detail,rule)  values(#{pname},#{price},#{image},#{stock},#{detail},#{rule})
 
     </insert>
 

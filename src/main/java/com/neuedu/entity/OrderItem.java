@@ -8,17 +8,31 @@ public class OrderItem implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -494723685089991504L;
+
+
+
 	private int  orderItemid;
 	private int  user_id;
 	private long orderItem_no;
 	private int  product_id;
 	private String product_name;
 	private String product_image;
+
+
+
+	private String product_rule;
 	private double current_unit_price;  
 	private long create_time;
 	private long update_time;
 	private int quantity;
 	private double total_price;
+	public String getProduct_rule() {
+		return product_rule;
+	}
+
+	public void setProduct_rule(String product_rule) {
+		this.product_rule = product_rule;
+	}
 	public int getUser_id() {
 		return user_id;
 	}
@@ -102,23 +116,32 @@ public class OrderItem implements Serializable {
 	public OrderItem() {
 		super();
 	}
-	
-	
-	@Override
-	public String toString() {
-		return "������ϸ [����id=" + orderItemid + ", �û�id=" + user_id + ", ������=" + orderItem_no
-				+ ", ��Ʒid=" + product_id + ", ��Ʒ����=" + product_name + ", ��ƷͼƬ=" + product_image
-				+ ", ʵ�ʸ�����=" + current_unit_price + ", ��������ʱ��=" + create_time + ", ����޸�ʱ��="
-				+ update_time + ", ����=" + quantity + ", �ܼ�=" + total_price + "]";
-	}
+
+
 	public String getProduct_name() {
 		return product_name;
 	}
 	public void setProduct_name(String product_name) {
 		this.product_name = product_name;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "OrderItem{" +
+				"orderItemid=" + orderItemid +
+				", user_id=" + user_id +
+				", orderItem_no=" + orderItem_no +
+				", product_id=" + product_id +
+				", product_name='" + product_name + '\'' +
+				", product_image='" + product_image + '\'' +
+				", product_rule='" + product_rule + '\'' +
+				", current_unit_price=" + current_unit_price +
+				", create_time=" + create_time +
+				", update_time=" + update_time +
+				", quantity=" + quantity +
+				", total_price=" + total_price +
+				'}';
+	}
 	
 	
 	

@@ -92,6 +92,7 @@ public class ProductController extends HttpServlet {
 		String name=req.getParameter("pname");
 		String detail=req.getParameter("detail");
 		String image=req.getParameter("image");
+		String rule=req.getParameter("rule");
 		try {
 			double price=Double.parseDouble(req.getParameter("price"));
 			int stock=Integer.parseInt(req.getParameter("stock"));
@@ -101,6 +102,7 @@ public class ProductController extends HttpServlet {
 			product.setPrice(price);
 			product.setImage(image);
 			product.setStock(stock);
+			product.setRule(rule);
 			
 			
 			addProduct(product);
@@ -154,6 +156,7 @@ req.getRequestDispatcher("showproduct.jsp").forward(req, resp);
 			String name=req.getParameter("pname");
 			String detail=req.getParameter("detail");
 			String image=req.getParameter("image");
+			String rule=req.getParameter("rule");
 			try {
 				int id=Integer.parseInt(req.getParameter("id"));
 				double price=Double.parseDouble(req.getParameter("price"));
@@ -164,7 +167,7 @@ req.getRequestDispatcher("showproduct.jsp").forward(req, resp);
 				product.setPrice(price);
 				product.setImage(image);
 				product.setStock(stock);
-				
+				product.setRule(rule);
 				
 				productservice.updateProduct(product);
 				

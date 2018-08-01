@@ -37,6 +37,9 @@
 	<td><span>输入商品图片：</span></td>
 	<td><input type="text" name="image" value=${ product.image } /></td>
 	</tr>
+		<td><span>输入商品规格：</span></td>
+		<td><input type="text" name="image" value=${ product.rule } /></td>
+		</tr>
 	<tr>
 	<td><input type="submit" value="修改" /></td>
 	</tr>

@@ -44,6 +44,7 @@ margin: 10px;
 <th>商品描述</th>
 <th>商品库存</th>
 <th>商品图片</th>
+ <th>商品规格</th>
  <th>用户操作</th>
 
 
@@ -58,6 +59,7 @@ margin: 10px;
 <td>${product.detail }</td>
 <td>${product.stock }</td>
 <td>${product.image }</td>
+ <td>${product.rule }</td>
 
 <td><a href="product?_id=${product.productid }&operation=3" class="choose" >修改</a></td>
 <td><a href="product?_id=${product.productid }&operation=4" class="choose">删除</a></td>

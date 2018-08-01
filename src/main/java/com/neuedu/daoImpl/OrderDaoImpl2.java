@@ -15,58 +15,57 @@ import com.neuedu.entity.Order;
 
 
 public class OrderDaoImpl2 implements OrderDao {
-	
+
 	@Override
 	public boolean addOrder(Order order) {
 		// TODO Auto-generated method stub
-		
-		Connection con=null;//
-		PreparedStatement st=null;
+
+		Connection con = null;//
+		PreparedStatement st = null;
 		//ʵ����������
 		try {
 			//��ȡ����
-			con=JDBC.conn();
+			con = JDBC.conn();
 			//��ȡstatement����ִ��sql���
-				
-			 int	user_id=order.getUser_id();
-			 int	shipping_id=order.getShipping_id();
-			 long	order_no=order.getOrder_no();
-			 String payment_type=order.getPayment_type();
-			 int	postage=order.getPostage();
-			 int	status=order.getStatus();
-			 double payment=order.getPayment();
-			 long  create_time=order.getCreate_time();
-			
-			 
-			 
-String sql4="insert into orders( user_id,shipping_id,order_no,payment_type,postage,status,payment,create_time) "
+
+			int user_id = order.getUser_id();
+			int shipping_id = order.getShipping_id();
+			long order_no = order.getOrder_no();
+			String payment_type = order.getPayment_type();
+			int postage = order.getPostage();
+			int status = order.getStatus();
+			double payment = order.getPayment();
+			long create_time = order.getCreate_time();
+
+
+			String sql4 = "insert into orders( user_id,shipping_id,order_no,payment_type,postage,status,payment,create_time) "
 					+ " values(?,?,?,?,?,?,?,now())";
-			
-st= con.prepareStatement(sql4);
+
+			st = con.prepareStatement(sql4);
 /**
  * "+user_id+","+shipping_id+","+order_no+",'
  * "+payment_type+"',"+postage+","+status+","+payment+",now() 
  * */
 
-st.setInt(1, user_id);
-st.setInt(2, shipping_id);
-st.setLong(3, order_no);
-st.setString(4, payment_type);
-st.setInt(5, postage);
-st.setInt(6, status);
-st.setDouble(7, payment);
+			st.setInt(1, user_id);
+			st.setInt(2, shipping_id);
+			st.setLong(3, order_no);
+			st.setString(4, payment_type);
+			st.setInt(5, postage);
+			st.setInt(6, status);
+			st.setDouble(7, payment);
 
-st.execute();		
-			
-			
+			st.execute();
+
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
 				JDBC.close(con, st);
-				
-				
+
+
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -78,32 +77,32 @@ st.execute();
 	@Override
 	public List<Order> findAll() {
 		// TODO Auto-generated method stub
-		
-		List<Order> orders=new ArrayList<Order>();
-		Connection con=null;
-		PreparedStatement st =null;
-		ResultSet re=null;
-		
+
+		List<Order> orders = new ArrayList<Order>();
+		Connection con = null;
+		PreparedStatement st = null;
+		ResultSet re = null;
+
 		try {
-			
-			con=JDBC.conn();
-			
-			String sql="select * from orders" ;
-			st=con.prepareStatement(sql);
-			re=st.executeQuery();
-			
-			while(re.next()) {
-				int ordersid=re.getInt("ordersid");
-				int user_id=re.getInt("user_id");
-				int shipping_id=re.getInt("shipping_id");
-				String  payment_type=re.getString("payment_type");
-				int postage=re.getInt("postage");
-				int status=re.getInt("status");
-				long order_no=re.getLong("order_no");
-				double payment=re.getDouble("payment");
-				long create_time=re.getLong("create_time");
-				
-				Order order=new Order();
+
+			con = JDBC.conn();
+
+			String sql = "select * from orders";
+			st = con.prepareStatement(sql);
+			re = st.executeQuery();
+
+			while (re.next()) {
+				int ordersid = re.getInt("ordersid");
+				int user_id = re.getInt("user_id");
+				int shipping_id = re.getInt("shipping_id");
+				String payment_type = re.getString("payment_type");
+				int postage = re.getInt("postage");
+				int status = re.getInt("status");
+				long order_no = re.getLong("order_no");
+				double payment = re.getDouble("payment");
+				long create_time = re.getLong("create_time");
+
+				Order order = new Order();
 				order.setId(ordersid);
 				order.setUser_id(user_id);
 				order.setShipping_id(shipping_id);
@@ -115,11 +114,11 @@ st.execute();
 				order.setCreate_time(create_time);
 				orders.add(order);
 			}
-		}  catch (SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			
+		} finally {
+
 			try {
 				JDBC.close(con, st, re);
 			} catch (SQLException e) {
@@ -127,7 +126,7 @@ st.execute();
 				e.printStackTrace();
 			}
 		}
-	return orders;	
+		return orders;
 	}
 
 	@Override
@@ -148,4 +147,11 @@ st.execute();
 		return 0;
 	}
 
+	@Override
+	public Order findOrderItemByOrderNo(long order_no) {
+		return null;
+	}
 }
+
+
+

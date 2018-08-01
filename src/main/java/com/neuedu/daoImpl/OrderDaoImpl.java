@@ -38,4 +38,10 @@ public class OrderDaoImpl implements OrderDao {
 		return orderdata.orders.size()+1;
 	}
 
+	@Override
+	public Order findOrderItemByOrderNo(long order_no) {
+		return null;
+	}
+
+
 }

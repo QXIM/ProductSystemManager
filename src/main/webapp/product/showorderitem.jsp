@@ -35,19 +35,19 @@
 </tr>
 
 
-<c:forEach items="${orderitems}"  var="orderitems">
+<c:forEach items="${orderItemList}"  var="orderItemList">
 
 <tr>
 
-<td>${orderitems.user_id }</td>
-<td>${orderitems.orderItem_no }</td>
-<td>${orderitems.product_id }</td>
-<td>${orderitems.product_name }</td>
-<td>${orderitems.product_image }</td>
-<td>${orderitems.create_time }</td>
-<td>${orderitems.current_unit_price }</td>
-<td>${orderitems.quantity }</td>
-<td>${orderitems.total_price }</td>
+<td>${orderItemList.user_id }</td>
+<td>${orderItemList.orderItem_no }</td>
+<td>${orderItemList.product_id }</td>
+<td>${orderItemList.product_name }</td>
+<td>${orderItemList.product_image }</td>
+<td>${orderItemList.create_time }</td>
+<td>${orderItemList.current_unit_price }</td>
+<td>${orderItemList.quantity }</td>
+<td>${orderItemList.total_price }</td>
 <td>
 <a href="cart?cid=${cart.id}&operation=4" >删除</a></td>
 

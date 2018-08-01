@@ -41,11 +41,14 @@
 <td>${order.postage }</td>
 <td>${order.status }</td>
 <td>${order.order_no }</td>
-
 <td>${order.payment }</td>
+
+
 <td>
 <a href="cart?cid=${cart.id}&operation=3" >删除</a></td>
-
+    <td>
+        <a href="order?order_no=${order.order_no}&operation=4" >订单明细</a></td>
+    </td>
 
 </tr>
 

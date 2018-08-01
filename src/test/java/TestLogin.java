@@ -159,11 +159,10 @@ public class TestLogin {
         orderItemDao.addOrderItem(list);
 
     }*/
-
-    public static void main(String []args){
-
-
-
+@Test
+    public void testorderItem(){
+        OrderDao orderDao=new MyBatisOrderImpl();
+        orderDao.findOrderItemByOrderNo(1533112716928L);
     }
 
 

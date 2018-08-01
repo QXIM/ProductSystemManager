@@ -25,129 +25,68 @@
 				success : function (result) {
 
                     $.each(result,function(i,e) {
+                        var _obj=result[i]
+						console.log(_obj)
 
-                        /*var checkbox=$("<input type='checkbox'>")
-                        checkbox.addClass("shoping_cart_detail_content1_buttom_css")
-						var a=$("<div></div>")
-						a.addClass("shoping_cart_detail_content1_buttom")
-						a.append(checkbox)
-						var image=$("<img src='img/james_548X548.jpg' >")
-                        image.addClass("shoping_cart_detail_content1_pic_css")
-                        var b=$("<div></div>")
-						b.addClass("shoping_cart_detail_content1_pic")
-                        b.append(image)
-
-						var pname=$("<p></p>")
-						pname.addClass("shoping_cart_detail_content1_txt1")
-
-                        var c=$("<div></div>")
-						c.append(pname)
-						var rule=$("<p></p>")
-						rule.addClass("shoping_cart_detail_content1_txt2_2")
-
-                        var detail=$("<p></p>")
-                        detail.addClass("shoping_cart_detail_content1_txt2_2")
-
-						var d=$("<div></div>")
-						d.append(rule)
-						d.append(detail)
-						c.append(d)
-
-                        var price=$("<p></p>")
-                        price.addClass("shoping_cart_detail_content1_money")
-
-                        var e=$("<div></div>")
-                        e.append(price)
-
-
-
-                        var f=$("<div></div>")
-                        f.addClass("detail_centent_low")
-
-
-
-                        var num=$("<input>")
-                        num.addClass("detail_centent_sl")
-
-                        var g=$("<div></div>")
-                        g.addClass("detail_centent_sl")
-						g.append(num)
-
-                        var h=$("<div></div>")
-                        h.addClass("detail_centent_hight")
-
-
-                        var allPrice=$("<p></p>")
-                        allPrice.addClass("shoping_cart_detail_content1_all_css")
-
-                        var i=$("<div></div>")
-						i.addClass("shoping_cart_detail_content1_all")
-                        i.append(allPrice)
-
-                        $(".shoping_cart_detail_content1").append(a)
-                        $(".shoping_cart_detail_content1").append(b)
-                        $(".shoping_cart_detail_content1").append(c)
-						$(".shoping_cart_detail_content1").append(e)
-                        $(".shoping_cart_detail_content1").append(f)
-                        $(".shoping_cart_detail_content1").append(g)
-                        $(".shoping_cart_detail_content1").append(h)
-                        $(".shoping_cart_detail_content1").append(i)
-
-						$(".shoping_cart_detail_content").append($(".shoping_cart_detail_content1"))
-*/
-
-	var c=$("<div>" +e.product.pname+"     "+e.product.rule+"    "+e.product.detail+"    "+e.product.price+"    "+e.quantity+"    "+((e.product.price)*(e.quantity))+"    "+((e.product.price)*(e.quantity))+"</div>")
-							/*c.addClass("shoping_cart_detail_content1")*/
-							/*$(allPrice).html(e.product.pname)
-                        $("#rule").text(e.product.rule)
-                        $("#detail").text(e.product.detail)
-                        $("#price").text(e.product.price)
-						$("#num").val(e.quantity)
-                        $("#allPrice").text((e.product.price)*(e.quantity))
-						$("#total_price").text((e.product.price)*(e.quantity))*/
-
-
-
-
-                        $(".shoping_cart_detail_content").append(c)
-
-
-
-                    })
-
-                }
-
-
-
-
-			})
-
-                /*$.ajax({
-                    type : 'post',
-                    url : 'http://localhost:8080/ProductSystem_web/front/product.do' ,
-                    data : {
-                        pageNo :  1
-                    } ,
-                    dataType : 'json' ,
-
-                    success : function(data) {
-                        pageNo++;
-                        /!* $("#container").removeClass('add-loading') *!/
-                        $.each(data , function(i,e){
-                            var item = $("<div>"+e.name+" : " + e.detail+"</div>")
-                            item.addClass('size');
-                            $("#container").append(item);
-
-                        })
-                    }
-                })*/
+						$("#content").append("<div class=\"shoping_cart_detail_content1\">\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_buttom\">\n" +
+                            "\t\t\t\t\t\t\t<input type=\"checkbox\" class=\"shoping_cart_detail_content1_buttom_css\" />\n" +
+                            "\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_pic\">\n" +
+                            "\t\t\t\t\t\t<img src=\"img/james_548X548.jpg\" class=\"shoping_cart_detail_content1_pic_css\" />\t\n" +
+                            "\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_txt\" >\n" +
+                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt1\" id=\"pname\">\n" +
+                            "\t\t\t\t\t\t\t\t"+_obj.product.pname+"</p>\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_txt2\">\n" +
+                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" >商品：NMNB17701020012</p>\n" +
+                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" id=\"rule\">"+_obj.product.rule+"</p>\n" +
+                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" id=\"detail\">"+_obj.product.detail+"</p>\n" +
+                            "\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_money\">\n" +
+                            "\t\t\t\t\t\t\t<span class=\"shoping_cart_detail_content1_money_css\">"+_obj.product.price+"</span>\n" +
+                            "\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_count\" >\n" +
+                            "\t\t\t\t\t\t\t\n" +
+                            "\t\t\t\t\t<div class=\"detail_centent_low\"></div>\n" +
+                            "\t\t\t\t\t<div class=\"detail_centent_sl\"><input type=\"text\" value=\"1\" class=\"shuliang\" value="+_obj.quantity+"> </div>\n" +
+                            "\t\t\t\t\t<div class=\"detail_centent_hight\"></div>\n" +
+                            "\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_all\">\n" +
+                            "\t\t\t\t\t\t<span class=\"shoping_cart_detail_content1_all_css\">"+(_obj.product.price)*(_obj.quantity)+"</span>\n" +
+                            "\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t<div class=\"shoping_cart_detail_content1_delete\">\n" +
+                            "\t\t\t\t\t\t\n" +
+                            "\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t</div>")
 
 
 
 
 
 
-            })
+
+
+
+
+
+
+ })
+}
+})
+})
+
+
+
+
+
+
+
+
+
 			
 			
 			
@@ -255,7 +194,14 @@
 						<span class="shoping_cart_detail_title_span">删除</span> </div>
 				</div>
 				<div class="shoping_cart_detail_content">
-					<div class="shoping_cart_detail_content1"></div>
+
+
+					<div id="content">
+
+					</div>
+
+
+
 					<div class="shoping_cart_detail_content2">
 						<div class="shoping_cart_detail_content2_title">
 							<div class="shoping_cart_detail_content2_title_text1">

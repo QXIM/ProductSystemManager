@@ -25,7 +25,7 @@
     </resultMap>
     <select id="findAllCart" resultMap="cart-product">
 
-  select c.num AS cart_no,c.cartid AS id, c.product_id  productid, c.quantity  ,p.pname,p.detail,p.image,p.stock,p.price from cart c  left join product p on c.product_id=p.productid
+  select c.num AS cart_no,c.cartid AS id, c.product_id  productid, c.quantity  ,p.pname,p.detail,p.image,p.stock,p.price,p.rule from cart c  left join product p on c.product_id=p.productid
 
 
     </select>

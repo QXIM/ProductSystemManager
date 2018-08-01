@@ -8,5 +8,6 @@ public interface OrderService {
 	
 	boolean addOrder();
 	List<Order> seeOrder();
+	Order findOrderItemByOrderNo(long order_no);
 
 }

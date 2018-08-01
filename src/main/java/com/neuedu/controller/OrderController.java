@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.neuedu.entity.Order;
 
+import com.neuedu.entity.OrderItem;
 import com.neuedu.service.OrderService;
 import com.neuedu.serviceImpl.OrderServiceImpl;
 
@@ -40,6 +41,8 @@ public class OrderController extends HttpServlet {
 				findAll(req,resp);
 			}else if(_op.equals("3")) {
 				deleteProduct(req, resp);
+			}else if(_op.equals("4")) {
+				findOrderItemByOrderNo(req, resp);
 			}else{
 				
 			}
@@ -75,4 +78,15 @@ public class OrderController extends HttpServlet {
 		req.getRequestDispatcher("showorder.jsp").forward(req, resp);
 		
 	}
+
+	public void findOrderItemByOrderNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String num =req.getParameter("order_no");
+		Long orderno=Long.parseLong(num);
+		Order order=orderServiceImpl.findOrderItemByOrderNo(orderno);
+		List<OrderItem> orderItemList=order.getOrderItemList();
+		req.setAttribute("orderItemList", orderItemList);
+		req.getRequestDispatcher("showorderitem.jsp").forward(req, resp);
+
+	}
+
 }

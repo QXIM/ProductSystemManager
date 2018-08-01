@@ -3,7 +3,7 @@ package com.neuedu.dao;
 import java.util.List;
 
 import com.neuedu.entity.Order;
-
+import com.neuedu.entity.OrderItem;
 
 
 public interface OrderDao {
@@ -19,6 +19,8 @@ public interface OrderDao {
 		boolean updateOrder(Order Cart);
 	
 		int idBySize();
-		
+
+	Order findOrderItemByOrderNo(long order_no);
+
 
 }

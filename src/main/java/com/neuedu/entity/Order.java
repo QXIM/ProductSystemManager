@@ -9,16 +9,6 @@ public class Order implements Serializable {
 	
 	
 	private static final long serialVersionUID = 7046575901122010263L;
-	private int id;
-	private int	user_id;
-	private int	shipping_id;
-	private String payment_type;	
-	private int	postage;
-	private int	status;
-	private long order_no;
-	private long create_time;
-	private double payment;
-	private List<OrderItem> orderItemList;
 
 	@Override
 	public String toString() {
@@ -32,7 +22,27 @@ public class Order implements Serializable {
 				", order_no=" + order_no +
 				", create_time=" + create_time +
 				", payment=" + payment +
+				", orderItemList=" + orderItemList +
 				'}';
+	}
+
+	private int id;
+	private int	user_id;
+	private int	shipping_id;
+	private String payment_type;	
+	private int	postage;
+	private int	status;
+	private long order_no;
+	private long create_time;
+	private double payment;
+	private List<OrderItem> orderItemList;
+
+	public List<OrderItem> getOrderItemList() {
+		return orderItemList;
+	}
+
+	public void setOrderItemList(List<OrderItem> orderItemList) {
+		this.orderItemList = orderItemList;
 	}
 
 	public int getUser_id() {

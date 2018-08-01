@@ -3,6 +3,7 @@ package com.neuedu.MyBatis;
 import com.neuedu.dao.OrderDao;
 import com.neuedu.entity.MyBatis;
 import com.neuedu.entity.Order;
+import com.neuedu.entity.OrderItem;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -31,15 +32,10 @@ public class MyBatisOrderImpl implements OrderDao {
 
 
 
-
-        Integer result=session.insert("com.neuedu.entity.Order.addOrder",order);
+        OrderDao orderDao= session.getMapper(OrderDao.class);
+        orderDao.addOrder(order);
         MyBatis.close(session);
-        System.out.println(result);
-        if(result==1){
-            return true;
-        }else{
-            return false;
-        }
+        return true;
 
 
     }
@@ -49,13 +45,13 @@ public class MyBatisOrderImpl implements OrderDao {
         SqlSession session;
         SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
         session = sqlMapper.openSession();
+        OrderDao orderDao=session.getMapper(OrderDao.class);
+        List<Order> orderList=orderDao.findAll();
 
-        List<Order> p= session.selectList("com.neuedu.entity.Order.findAll");
-
-        System.out.println(p);
+        System.out.println(orderList);
         MyBatis.close(session);
 
-        return p;
+        return orderList;
 
     }
 
@@ -72,5 +68,23 @@ public class MyBatisOrderImpl implements OrderDao {
     @Override
     public int idBySize() {
         return 0;
+    }
+
+    @Override
+    public Order findOrderItemByOrderNo(long order_no) {
+
+        SqlSession session;
+        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession();
+
+        OrderDao orderDao=session.getMapper(OrderDao.class);
+       Order order= orderDao.findOrderItemByOrderNo(order_no);
+        System.out.println(order);
+        MyBatis.close(session);
+
+        return order;
+
+
+
     }
 }

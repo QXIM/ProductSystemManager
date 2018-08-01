@@ -2,6 +2,7 @@ package com.neuedu.serviceImpl;
 
 import java.util.*;
 
+import com.neuedu.MyBatis.MyBatisCartImpl;
 import com.neuedu.MyBatis.MyBatisOrderImpl;
 import com.neuedu.MyBatis.MyBatisOrderItemImpl;
 import com.neuedu.dao.CartDao;
@@ -26,7 +27,7 @@ import com.neuedu.service.OrderService;
 public class OrderServiceImpl implements OrderService {
 	OrderDao orderDaoImpl=new MyBatisOrderImpl();
 	OrderItemDao orderItemDao=new MyBatisOrderItemImpl();
-	CartDao CartDao =new CartDaoImpl2();
+	CartDao CartDao =new MyBatisCartImpl();
 	@Override
 	public boolean addOrder() {
 		// TODO Auto-generated method stub
@@ -88,7 +89,12 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return orderDaoImpl.findAll();
 	}
-	
+
+	@Override
+	public Order findOrderItemByOrderNo(long order_no) {
+		return orderDaoImpl.findOrderItemByOrderNo(order_no);
+	}
+
 	//���㶩���۸�
 	public double payment(List<OrderItem> orderitems) {
 		double payments=0.0;
