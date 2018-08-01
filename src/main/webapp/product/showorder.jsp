@@ -44,9 +44,9 @@
 <td>${order.payment }</td>
 
 
-<td>
+<%--<td>
 <a href="cart?cid=${cart.id}&operation=3" >删除</a></td>
-    <td>
+    <td>--%>
         <a href="order?order_no=${order.order_no}&operation=4" >订单明细</a></td>
     </td>
 
@@ -57,7 +57,7 @@
 </table>
 
 
-<a href="orderitem?operation=1" ><h3 style="color: bule">查看订单明细</h3></a>
+
 
 
 <a  href="order?cid=${cart.id}&operation=3" ><h4 style="color: red" >支付</h4></a>

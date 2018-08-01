@@ -48,8 +48,8 @@
 <td>${orderItemList.current_unit_price }</td>
 <td>${orderItemList.quantity }</td>
 <td>${orderItemList.total_price }</td>
-<td>
-<a href="cart?cid=${cart.id}&operation=4" >删除</a></td>
+<%--<td>
+<a href="cart?cid=${cart.id}&operation=4" >删除</a></td>--%>
 
 
 

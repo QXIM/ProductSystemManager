@@ -159,10 +159,31 @@ public class TestLogin {
         orderItemDao.addOrderItem(list);
 
     }*/
-@Test
+
     public void testorderItem(){
         OrderDao orderDao=new MyBatisOrderImpl();
         orderDao.findOrderItemByOrderNo(1533112716928L);
+    }
+
+    public void testdeletecart(){
+
+    CartDao cartDao=new     MyBatisCartImpl();
+    cartDao.deleteCart(1);
+
+    }
+
+
+    public void testclearCart(){
+        CartDao cartDao=new     MyBatisCartImpl();
+        cartDao.clearCart();
+    }
+
+    @Test
+
+    public  void testupdatecart(){
+
+        CartDao cartDao=new     MyBatisCartImpl();
+        cartDao.updateCartNum(1,2);
     }
 
 

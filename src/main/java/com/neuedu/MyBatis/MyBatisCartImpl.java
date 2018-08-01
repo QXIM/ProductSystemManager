@@ -6,7 +6,9 @@ import com.neuedu.entity.MyBatis;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MyBatisCartImpl implements CartDao {
 
@@ -43,12 +45,30 @@ public class MyBatisCartImpl implements CartDao {
 
     @Override
     public boolean deleteCart(int id) {
-        return false;
+         SqlSession session;
+        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession(true);
+        CartDao cartdao=session.getMapper(CartDao.class);
+        cartdao.deleteCart(id);
+        session.commit();
+        session.close();
+        return true;
     }
 
     @Override
     public boolean updateCartNum(int id, int quantity) {
-        return false;
+
+        SqlSession session;
+        SqlSessionFactory sessionMapper = MyBatis.getSqlSessionFactory();
+        session=sessionMapper.openSession(true);
+        CartDao cartdao=session.getMapper(CartDao.class);
+
+
+        cartdao.updateCartNum(id,quantity);
+        session.close();
+
+
+        return true;
     }
 
     @Override
@@ -58,11 +78,30 @@ public class MyBatisCartImpl implements CartDao {
 
     @Override
     public void clearCart() {
+        SqlSession session;
+        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession(true);
+        CartDao cartdao=session.getMapper(CartDao.class);
+        cartdao.clearCart();
+        session.commit();
+        session.close();
+
+
 
     }
 
     @Override
     public Cart findById(int id) {
-        return null;
+    SqlSession session;
+    SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
+
+        session=sqlMapper.openSession();
+
+    CartDao cartDao=session.getMapper(CartDao.class);
+    Cart cart=cartDao.findById(id);
+
+
+
+        return cart;
     }
 }

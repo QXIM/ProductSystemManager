@@ -31,5 +31,27 @@
     </select>
 
 
+    <delete id="deleteCart" parameterType="java.lang.Integer" >
+        delete from cart where cartid=#{id}
+    </delete>
+
+<delete id="clearCart" >
+    delete from cart
+</delete>
+
+
+    <select id="findById" resultType="com.neuedu.entity.Cart" parameterType="java.lang.Integer">
+
+    select * from cart where cartid=#{id}
+
+    </select>
+
+
+    <update id="updateCartNum" parameterType="Map" >
+
+
+        update  cart set quantity=#{arg1} where cartid=#{arg0}
+
+    </update>
 
 </mapper>
