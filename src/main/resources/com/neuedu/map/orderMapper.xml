@@ -5,7 +5,7 @@
 <mapper namespace="com.neuedu.dao.OrderDao">
 
     <insert id="addOrder" parameterType="com.neuedu.entity.Order" >
-insert into orders( user_id,shipping_id,order_no,payment_type,postage,status,payment,create_time)  values(#{user_id},#{shipping_id},#{order_no},#{payment_type},#{postage},#{status},#{payment},now());
+insert into orders(ordersid,user_id,shipping_id,order_no,payment_type,postage,status,payment,create_time)  values(#{ordersid},#{user_id},#{shipping_id},#{order_no},#{payment_type},#{postage},#{status},#{payment},now());
     </insert>
 
     <select id="findAll" resultType="com.neuedu.entity.Order">

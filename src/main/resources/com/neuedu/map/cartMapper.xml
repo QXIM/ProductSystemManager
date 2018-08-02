@@ -26,9 +26,7 @@
     <select id="findAllCart" resultMap="cart-product">
 
   select c.num AS cart_no,c.cartid AS id, c.product_id  productid, c.quantity  ,p.pname,p.detail,p.image,p.stock,p.price,p.rule from cart c  left join product p on c.product_id=p.productid
-
-
-    </select>
+ </select>
 
 
     <delete id="deleteCart" parameterType="java.lang.Integer" >
@@ -42,7 +40,7 @@
 
     <select id="findById" resultType="com.neuedu.entity.Cart" parameterType="java.lang.Integer">
 
-    select * from cart where cartid=#{id}
+    select cartid,num,product_id,quantity  from cart  where cartid=#{id}
 
     </select>
 

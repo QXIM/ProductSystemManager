@@ -92,16 +92,14 @@ public class MyBatisCartImpl implements CartDao {
 
     @Override
     public Cart findById(int id) {
-    SqlSession session;
-    SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
-
-        session=sqlMapper.openSession();
-
-    CartDao cartDao=session.getMapper(CartDao.class);
-    Cart cart=cartDao.findById(id);
-
-
-
+        SqlSession session;
+        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
+        session = sqlMapper.openSession(true);
+        CartDao cartdao=session.getMapper(CartDao.class);
+        Cart cart=cartdao.findById(id);
+        session.commit();
+        session.close();
+        System.out.println(cart);
         return cart;
     }
 }

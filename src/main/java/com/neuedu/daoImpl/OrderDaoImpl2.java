@@ -103,7 +103,7 @@ public class OrderDaoImpl2 implements OrderDao {
 				long create_time = re.getLong("create_time");
 
 				Order order = new Order();
-				order.setId(ordersid);
+				order.setOrdersid(ordersid);
 				order.setUser_id(user_id);
 				order.setShipping_id(shipping_id);
 				order.setOrder_no(order_no);

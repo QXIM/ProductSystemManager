@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
 		List<OrderItem> orderitems=new ArrayList<OrderItem>();
 		for(int i=0;i<carts.size();i++) {
 			Cart c=carts.get(i);
-			OrderItem orderItemImpl=Input.createItem(order.getId(),order.getOrder_no(),c);
+			OrderItem orderItemImpl=Input.createItem(order.getOrdersid(),order.getOrder_no(),c);
 			if(orderItemImpl.getQuantity()<=c.getProduct().getStock()) {
 				orderitems.add(orderItemImpl);
 			}else {
@@ -77,7 +77,7 @@ public class OrderServiceImpl implements OrderService {
 		public static Order createOrder() {
 		OrderDao orderDaoImpl=new OrderDaoImpl2();
 		Order order=new Order();
-		order.setId(orderDaoImpl.idBySize());
+		order.setOrdersid(orderDaoImpl.idBySize());
 		order.setOrder_no(System.currentTimeMillis());
 		order.setCreate_time(System.currentTimeMillis());
 		return order;

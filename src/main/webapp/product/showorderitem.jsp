@@ -20,8 +20,8 @@
 
 <tr>
 
-<th>用户id</th>
-<th>订单编号</th>
+
+
 <th>商品id</th>
 <th>商品名称</th>
 <th>商品图片</th>
@@ -39,8 +39,8 @@
 
 <tr>
 
-<td>${orderItemList.user_id }</td>
-<td>${orderItemList.orderItem_no }</td>
+
+
 <td>${orderItemList.product_id }</td>
 <td>${orderItemList.product_name }</td>
 <td>${orderItemList.product_image }</td>

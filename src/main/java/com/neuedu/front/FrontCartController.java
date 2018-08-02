@@ -39,11 +39,7 @@ public class FrontCartController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
-
-		
 		String method=request.getParameter("method");
-		
-		
 		CartService carts=new CartServiceImpl();
 		List<Cart> list=carts.findAllCart();
 		Gson gson=new Gson();

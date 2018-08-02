@@ -178,14 +178,18 @@ public class TestLogin {
         cartDao.clearCart();
     }
 
-    @Test
+
 
     public  void testupdatecart(){
 
         CartDao cartDao=new     MyBatisCartImpl();
-        cartDao.updateCartNum(1,2);
+        cartDao.updateCartNum(36,2);
     }
-
+    @Test
+    public void testfindbyid(){
+        CartDao cartDao=new     MyBatisCartImpl();
+        cartDao.findById(40);
+    }
 
 
 

@@ -26,14 +26,10 @@
 </tr>
 
 
-
-
-
-
 <c:forEach items="${order}"  var="order">
 
 <tr>
-<td>${order.id}</td>
+<td>${order.ordersid}</td>
 <td>${user.accountid}</td>
 <td>${order.shipping_id }</td>
 <td>${order.payment_type }</td>
@@ -47,8 +43,9 @@
 <%--<td>
 <a href="cart?cid=${cart.id}&operation=3" >删除</a></td>
     <td>--%>
+    <td>
         <a href="order?order_no=${order.order_no}&operation=4" >订单明细</a></td>
-    </td>
+
 
 </tr>
 

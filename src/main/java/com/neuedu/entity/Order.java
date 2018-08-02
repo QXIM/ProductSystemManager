@@ -13,7 +13,7 @@ public class Order implements Serializable {
 	@Override
 	public String toString() {
 		return "Order{" +
-				"id=" + id +
+				"ordersid=" + ordersid +
 				", user_id=" + user_id +
 				", shipping_id=" + shipping_id +
 				", payment_type='" + payment_type + '\'' +
@@ -26,7 +26,16 @@ public class Order implements Serializable {
 				'}';
 	}
 
-	private int id;
+	private int ordersid;
+
+	public int getOrdersid() {
+		return ordersid;
+	}
+
+	public void setOrdersid(int ordersid) {
+		this.ordersid = ordersid;
+	}
+
 	private int	user_id;
 	private int	shipping_id;
 	private String payment_type;	
@@ -81,18 +90,13 @@ public class Order implements Serializable {
 	public Order() {
 		super();
 	}
-	public Order(int id, long order_no, long create_time) {
+	public Order(int ordersid, long order_no, long create_time) {
 		super();
-		this.id = id;
+		this.ordersid = ordersid;
 		this.order_no = order_no;
 		this.create_time = create_time;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public long getOrder_no() {
 		return order_no;
 	}

@@ -47,11 +47,9 @@ public class MyBatisOrderImpl implements OrderDao {
         session = sqlMapper.openSession();
         OrderDao orderDao=session.getMapper(OrderDao.class);
         List<Order> orderList=orderDao.findAll();
-
         System.out.println(orderList);
         MyBatis.close(session);
-
-        return orderList;
+         return orderList;
 
     }
 

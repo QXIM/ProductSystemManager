@@ -24,7 +24,7 @@
 <th>商品图片</th>
 <th>购物车数量</th>
 
-<th>用户操作</th>
+<%--<th>用户操作</th>--%>
 </tr>
 
 <c:forEach items="${carts}"  var="cart">
@@ -42,11 +42,11 @@
 
 
 <td>${cart.quantity }</td>
-<td>
+<%--<td>
 <a href="cart?cid=${cart.id }&operation=3" >删除</a>
 <a href="cart?cid=${cart.id}&operation=4" >修改数量</a>
 
-</td>
+</td>--%>
 
 
 

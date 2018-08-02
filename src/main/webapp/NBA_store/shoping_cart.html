@@ -15,9 +15,6 @@
 		<script>
 			
 			$(function (){
-
-                /*$(".shoping_cart_detail_content1").load("shop_cart_content.html")*/
-
 			$.ajax({
 				type:'get',
 				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findAllCart',
@@ -41,7 +38,7 @@
                             "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt1\" id=\"pname\">\n" +
                             "\t\t\t\t\t\t\t\t"+_obj.product.pname+"</p>\n" +
                             "\t\t\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_txt2\">\n" +
-                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" >商品：NMNB17701020012</p>\n" +
+                            "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" ></p>\n" +
                             "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" id=\"rule\">"+_obj.product.rule+"</p>\n" +
                             "\t\t\t\t\t\t\t<p class=\"shoping_cart_detail_content1_txt2_2\" id=\"detail\">"+_obj.product.detail+"</p>\n" +
                             "\t\t\t\t\t\t\t</div>\n" +
@@ -52,7 +49,7 @@
                             "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_count\" >\n" +
                             "\t\t\t\t\t\t\t\n" +
                             "\t\t\t\t\t<div class=\"detail_centent_low\"></div>\n" +
-                            "\t\t\t\t\t<div class=\"detail_centent_sl\"><input type=\"text\" value=\"1\" class=\"shuliang\" value="+_obj.quantity+"> </div>\n" +
+                            "\t\t\t\t\t<div class=\"detail_centent_sl\"><input type=\"text\"  class=\"shuliang\" value="+_obj.quantity+"> </div>\n" +
                             "\t\t\t\t\t<div class=\"detail_centent_hight\"></div>\n" +
                             "\t\t\t\t\t\t</div>\n" +
                             "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_all\">\n" +
@@ -71,7 +68,7 @@
         dataType:'json',
         success : function (result) {
 
-
+        }
     })
 
 
@@ -225,10 +222,10 @@
 
 					<div class="shoping_cart_detail_content2">
 						<div class="shoping_cart_detail_content2_title">
-							<div class="shoping_cart_detail_content2_title_text1">
+							<!--<div class="shoping_cart_detail_content2_title_text1">
 							<span class="shoping_cart_detail_content2_title_text1_1">	订单总计</span>
 							<span class="shoping_cart_detail_content2_title_text1_2" id="total_price">¥850.00</span>
-							</div>
+							</div>-->
 							
 							<div class="detail_buttom">
 								
@@ -249,7 +246,7 @@
 			</div>
 			</div>
 		<!--页脚-->
-		<footer class="footer">
+		<!--<footer class="footer">
 				<div class="footer_first">
 					<div class="logo2"></div>
 					<div class="footer_first_user1">
@@ -274,7 +271,7 @@
 		
 				
 				</footer>
-		
+		-->
 		
 		
 		
