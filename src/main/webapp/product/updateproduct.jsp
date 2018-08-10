@@ -15,11 +15,11 @@
 	<input type="hidden" name="operation" value="5"/>
 	<table>
 	<tr>
-	<td><input type="text" name="id" value=${ product.id } readonly="readonly" /></td>
+	<td><input type="text" name="id" value=${ product.productid } readonly="readonly" /></td>
 	</tr>
 	<tr>
 	<td><span>输入商品名称：</span></td>
-	<td><input type="text" name="pname" value=${ product.name } /></td>
+	<td><input type="text" name="pname" value=${ product.pname } /></td>
 	</tr>
 	<tr>
 	<td><span>输入商品价格：</span></td>

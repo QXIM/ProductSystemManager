@@ -7,11 +7,23 @@ import com.neuedu.daoImpl.UserDaoImpl2;
 import com.neuedu.entity.User;
 import com.neuedu.input.MD5Utils;
 import com.neuedu.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl implements UserService {
-	UserDao userDaoImpl=new MyBatisloginImpl();
-	
-	
+	@Autowired
+	UserDao userDaoImpl;
+
+	public UserDao getUserDaoImpl() {
+		return userDaoImpl;
+	}
+
+	public void setUserDaoImpl(UserDao userDaoImpl) {
+		this.userDaoImpl = userDaoImpl;
+	}
+
 	@Override
 	public boolean addUser(User user) {
 		// TODO Auto-generated method stub

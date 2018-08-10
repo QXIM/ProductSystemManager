@@ -12,7 +12,9 @@ import com.neuedu.dao.CartDao;
 import com.neuedu.entity.Cart;
 import com.neuedu.entity.JDBC;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CartDaoImpl2 implements CartDao {
 	
 

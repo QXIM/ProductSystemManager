@@ -6,8 +6,9 @@ package com.neuedu.dao;
 
 import com.neuedu.entity.Category;
 import com.neuedu.entity.PageModel;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface CategoryDao {
 	
 	//��

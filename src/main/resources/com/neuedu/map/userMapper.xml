@@ -14,5 +14,12 @@
 update	account set token=#{token}  where accountid=#{accountid}
     </update>
 
+    <select id="findTokenByAccountid" resultType="java.lang.String" parameterType="java.lang.Integer">
+
+        select token from account where accountid=#{Accountid}
+
+    </select>
+
+
 
 </mapper>

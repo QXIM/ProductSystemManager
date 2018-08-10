@@ -31,7 +31,10 @@
     </update>
 
 
+    <select id="findcategoryById" resultType="com.neuedu.entity.Category" >
 
+        select * from category where categoryid=#{id}
+    </select>
 
 
 

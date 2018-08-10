@@ -4,25 +4,8 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
-    <environments default="development">
-        <environment id="development">
-            <transactionManager type="JDBC"></transactionManager>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/products"/>
-                <property name="username" value="root"/>
-                <property name="password" value="root"/>
-            </dataSource>
-        </environment>
-    </environments>
-    <mappers>
-        <mapper resource="com\neuedu\map\userMapper.xml"/>
-        <mapper resource="com\neuedu\map\productMapper.xml"/>
-        <mapper resource="com\neuedu\map\categoryMapper.xml"/>
-        <mapper resource="com\neuedu\map\orderMapper.xml"/>
-        <mapper resource="com\neuedu\map\cartMapper.xml" />
-        <mapper resource="com\neuedu\map\orderItemMapper.xml" />
-    </mappers>
+
+
 
 </configuration>
 

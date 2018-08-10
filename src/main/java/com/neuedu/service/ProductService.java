@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface ProductService {
 	
 	//��

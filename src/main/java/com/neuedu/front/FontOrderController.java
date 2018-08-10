@@ -1,27 +1,25 @@
-package com.neuedu.controller;
+package com.neuedu.front;
 
-import java.io.IOException;
-import java.util.List;
+import com.google.gson.Gson;
+import com.neuedu.entity.Cart;
+import com.neuedu.entity.Order;
+import com.neuedu.entity.OrderItem;
+import com.neuedu.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.neuedu.entity.Order;
-
-import com.neuedu.entity.OrderItem;
-import com.neuedu.service.OrderService;
-import com.neuedu.serviceImpl.OrderServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;
-import org.springframework.web.context.support.WebApplicationContextUtils;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 
-@WebServlet("/product/order")
-public class OrderController extends HttpServlet {
+@WebServlet("/com/neuedu/front/order.do")
+public class FontOrderController extends HttpServlet {
 	@Autowired
 	OrderService orderServiceImpl;
 	/**
@@ -44,12 +42,7 @@ public class OrderController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		System.out.println("order");
-		String _op=req.getParameter("operation");
-		
-		
-		if(_op!=null&&!_op.equals(" ")) {
+		/*if(_op!=null&&!_op.equals(" ")) {
 			
 			if(_op.equals("1")) {
 				addOrder(req,resp);
@@ -60,16 +53,23 @@ public class OrderController extends HttpServlet {
 				deleteProduct(req, resp);
 			}else if(_op.equals("4")) {
 				findOrderItemByOrderNo(req, resp);
-			}else if(_op.equals("5")) {
-				findOrderByOrderNo(req, resp);
-			} else if(_op.equals("6")) {
-				updateOrder(req, resp);
 			}else{
-
-
 			}
-		
-	}
+	}*/
+		String _op=req.getParameter("method");
+		if (_op.equals("addOrder")){
+			addOrder(req, resp);
+		}else if (_op.equals("findAll")){
+			findAll(req, resp);
+		}
+
+
+
+
+
+
+
+
 	}
 	private void deleteProduct(HttpServletRequest req, HttpServletResponse resp) {
 		// TODO Auto-generated method stub
@@ -85,17 +85,40 @@ public class OrderController extends HttpServlet {
 
 	}
 	public  void addOrder(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		/*String []checkbox= req.getParameterValues("checkbox");
+
+		for (int i=0;i<checkbox.length;i++){
+
+			String id=checkbox[i];
+			System.out.println(id);
+		}*/
+
+
+
 		boolean result= orderServiceImpl.addOrder();
 		if(result) {
 			System.out.println("����������");
 			findAll(req, resp);
 		}
 	}
-	public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=utf-8");
+		request.setCharacterEncoding("utf-8");
+		System.out.println("========find=========");
 		List<Order> order= orderServiceImpl.seeOrder();
+		String callback = request.getParameter("callback");
+		PrintWriter pw = response.getWriter();
+		Gson gson = new Gson();
+		String result = gson.toJson(order);
+		System.out.println(result);
+		pw.println(callback+"("+result+")");
+
+
+		/*List<Order> order= orderServiceImpl.seeOrder();
 		req.setAttribute("order", order);
-		req.getRequestDispatcher("showorder.jsp").forward(req, resp);
+		req.getRequestDispatcher("showorder.jsp").forward(req, resp);*/
 		
 	}
 
@@ -109,24 +132,17 @@ public class OrderController extends HttpServlet {
 
 	}
 
-	public void findOrderByOrderNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String num =req.getParameter("order_no");
-        Long orderno=Long.parseLong(num);
-		Order updateorder=orderServiceImpl.findOrderItemByOrderNo(orderno);
-		req.setAttribute("updateorder", updateorder);
-		req.getRequestDispatcher("updateorderstatus.jsp").forward(req, resp);
-
-	}
+	public void  updateOrder(HttpServletRequest req, HttpServletResponse resp){
 
 
-	public void  updateOrder(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String _order_no =req.getParameter("order_no");
+		String _id =req.getParameter("id");
 		String _status =req.getParameter("status");
-        Long order_no=Long.parseLong(_order_no);
+		int id=Integer.parseInt(_id);
 		int status=Integer.parseInt(_status);
-		boolean result=orderServiceImpl.updateOrder(order_no,status);
+		boolean result=orderServiceImpl.updateOrder(id,status);
 		System.out.println(result);
-		findAll(req, resp);
 	}
+
+
 
 }

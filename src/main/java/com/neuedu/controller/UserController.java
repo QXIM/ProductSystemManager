@@ -14,18 +14,37 @@ import com.neuedu.entity.User;
 import com.neuedu.input.MD5Utils;
 import com.neuedu.service.UserService;
 import com.neuedu.serviceImpl.UserServiceImpl;
-
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 
 @WebServlet("/login.do")
+@Controller
 public class UserController extends HttpServlet {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	UserService userServiceImpl=new UserServiceImpl();
-	
+	@Autowired
+	UserService userServiceImpl;
+
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        /*WebApplicationContext mWebApplicationContext
+                = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
+        userServiceImpl =(UserService) mWebApplicationContext.getBean("userServiceImpl");
+*/
+		SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,this.getServletContext());
+
+	}
+
+
+
 	public boolean addUser(User user) {
 		// TODO Auto-generated method stub
 		return userServiceImpl.addUser(user);

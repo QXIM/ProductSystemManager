@@ -15,7 +15,9 @@ import com.neuedu.entity.Category;
 import com.neuedu.entity.JDBC;
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CategoryDaoImpl implements CategoryDao {
 
 	@Override

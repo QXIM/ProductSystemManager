@@ -6,7 +6,9 @@ import com.neuedu.dao.ProductDao;
 import com.neuedu.data.ProductData;
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ProductDaoImpl implements ProductDao {
 	ProductData productdate =new ProductData();
 	@Override
@@ -78,6 +80,11 @@ public class ProductDaoImpl implements ProductDao {
 	public PageModel<Product> findProductByPage(int pageNo, int pageSize) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean updateProductStock(Product product) {
+		return false;
 	}
 
 }

@@ -12,26 +12,28 @@ import com.neuedu.dao.ProductDao;
 import com.neuedu.entity.JDBC;
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ProductDaoImpl2 implements ProductDao {
 	
 	
 
 	
 	
-//������Ʒ
+//???????
 	@Override
 	public boolean addProduct(Product product) {
 		// TODO Auto-generated method stub
-		//����������
-		//����������
+		//??????????
+		//??????????
 		Connection con=null;//
 		PreparedStatement st=null;
-		//ʵ����������
+		//???????????
 		try {
-			//��ȡ����
+			//???????
 			con=JDBC.conn();
-			//��ȡstatement����ִ��sql���
+			//???statement???????sql???
 			
 			
 			int _id=product.getProductid();
@@ -50,7 +52,7 @@ public class ProductDaoImpl2 implements ProductDao {
 			st.setString(5, detail);
 			
 			st.execute();		
-			System.out.println("��ӳɹ�");
+			System.out.println("?????");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -75,11 +77,11 @@ public class ProductDaoImpl2 implements ProductDao {
 		
 		Connection con=null;//
 		PreparedStatement st=null;
-		//ʵ����������
+		//???????????
 		try {
-			//��ȡ����
+			//???????
 			con=JDBC.conn();
-			//��ȡstatement����ִ��sql���
+			//???statement???????sql???
 			String sql="delete	from product where productid= ?";
 			st= con.prepareStatement(sql);
 			st.setInt(1, id);
@@ -111,11 +113,11 @@ public class ProductDaoImpl2 implements ProductDao {
 		
 		Connection con=null;//
 		PreparedStatement st=null;
-		//ʵ����������
+		//???????????
 		try {
-			//��ȡ����
+			//???????
 			con=JDBC.conn();
-			//��ȡstatement����ִ��sql���
+			//???statement???????sql???
 			int _id=product.getProductid();
 			String name=product.getPname();
 			double price=product.getPrice();
@@ -153,7 +155,7 @@ public class ProductDaoImpl2 implements ProductDao {
 		
 		
 	}
-	//ͨ��id�鿴
+	//???id??
 	@Override
 	public Product findproductById(int id) {
 		// TODO Auto-generated method stub
@@ -182,7 +184,7 @@ public class ProductDaoImpl2 implements ProductDao {
 				product.setPrice(re.getDouble("price"));
 				product.setImage(re.getString("image"));	
 				product.setStock(re.getInt("stock"));
-					System.out.println("���ҵ�"+product);
+					System.out.println("?????"+product);
 				return product;
 				}else {
 					System.out.println("0000");
@@ -207,17 +209,17 @@ public class ProductDaoImpl2 implements ProductDao {
 		
 		
 	}
-	//�޸�
+	//???
 	public boolean updateProductStock(Product product) {
 		// TODO Auto-generated method stub
 		
 		Connection con=null;//
 		PreparedStatement st=null;
-		//ʵ����������
+		//???????????
 		try {
-			//��ȡ����
+			//???????
 			con=JDBC.conn();
-			//��ȡstatement����ִ��sql���
+			//???statement???????sql???
 			
 			
 			int _id=product.getProductid();
@@ -319,7 +321,7 @@ public class ProductDaoImpl2 implements ProductDao {
 		ResultSet re=null;
 		
 		try {
-			System.out.println("����dao");	
+			System.out.println("????dao");	
 			con=JDBC.conn();
 			
 			String sqlcount="select count(productid) from product";
@@ -329,8 +331,8 @@ public class ProductDaoImpl2 implements ProductDao {
 			System.out.println("2");	
 			if(re.next()) {
 				
-			int totalcount= re.getInt(1);//�ܼ�¼
-			//�������Ҷ
+			int totalcount= re.getInt(1);//????
+			//????????
 		int totalPage=(totalcount%pageSize)==0?totalcount/pageSize:(totalcount/pageSize+1);
 		PageModel.setTotalPage(totalPage);
 		System.out.println("3");

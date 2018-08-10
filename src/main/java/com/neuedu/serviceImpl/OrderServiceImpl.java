@@ -9,6 +9,7 @@ import com.neuedu.dao.CartDao;
 import com.neuedu.dao.OrderDao;
 import com.neuedu.dao.OrderItemDao;
 
+import com.neuedu.dao.ProductDao;
 import com.neuedu.daoImpl.CartDaoImpl2;
 
 import com.neuedu.daoImpl.OrderDaoImpl2;
@@ -22,12 +23,31 @@ import com.neuedu.entity.Product;
 
 import com.neuedu.input.Input;
 import com.neuedu.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 
 public class OrderServiceImpl implements OrderService {
-	OrderDao orderDaoImpl=new MyBatisOrderImpl();
-	OrderItemDao orderItemDao=new MyBatisOrderItemImpl();
-	CartDao CartDao =new MyBatisCartImpl();
+
+	@Autowired
+	@Qualifier("myBatisOrderImpl")
+	OrderDao orderDaoImpl;
+
+	@Autowired
+	@Qualifier("myBatisOrderItemImpl")
+	OrderItemDao orderItemDao;
+
+	@Autowired
+	@Qualifier("myBatisCartImpl")
+	CartDao CartDao ;
+
+	@Autowired
+	@Qualifier("myBatisProductImpl")
+	ProductDao productDao  ;
+
 	@Override
 	public boolean addOrder() {
 		// TODO Auto-generated method stub
@@ -48,9 +68,10 @@ public class OrderServiceImpl implements OrderService {
 				return false;
 			}
 		}
+
 		order.setPayment(payment(orderitems));
 		
-			//�µ�
+
 		orderDaoImpl.addOrder(order);
 		orderItemDao.addOrderItem(orderitems);
 		//���㶩���ܼ۸�
@@ -61,10 +82,10 @@ public class OrderServiceImpl implements OrderService {
 			
 			int leftStock=p.getStock()-cart.getQuantity();
 			p.setStock(leftStock);
-		ProductDaoImpl2 productDaoImpl2=new ProductDaoImpl2();
-		boolean issucc=	productDaoImpl2.updateProductStock(p);
+
+		boolean issucc=	productDao.updateProductStock(p);
 			if(issucc) {
-				System.out.println("����");
+				System.out.println("扣除成功");
 			}else {
 				return false;
 			}
@@ -75,9 +96,12 @@ public class OrderServiceImpl implements OrderService {
 		return true;
 	}
 		public static Order createOrder() {
-		OrderDao orderDaoImpl=new OrderDaoImpl2();
+
+
+
+
 		Order order=new Order();
-		order.setOrdersid(orderDaoImpl.idBySize());
+
 		order.setOrder_no(System.currentTimeMillis());
 		order.setCreate_time(System.currentTimeMillis());
 		return order;
@@ -95,6 +119,8 @@ public class OrderServiceImpl implements OrderService {
 		return orderDaoImpl.findOrderItemByOrderNo(order_no);
 	}
 
+
+
 	//���㶩���۸�
 	public double payment(List<OrderItem> orderitems) {
 		double payments=0.0;
@@ -103,4 +129,10 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return payments;
 	}
+
+	@Override
+	public boolean updateOrder(long order_no, int status) {
+		return orderDaoImpl.updateOrder(order_no, status);
+	}
+
 }

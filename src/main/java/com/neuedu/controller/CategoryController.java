@@ -14,12 +14,32 @@ import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
 import com.neuedu.service.CategoryService;
 import com.neuedu.serviceImpl.CategoryServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 
 @WebServlet("/product/category")
+@Controller
 public class CategoryController extends HttpServlet {
-	CategoryService CategoryService=new CategoryServiceImpl();
-	
+	@Autowired
+	CategoryService CategoryService;
+
+
+
+	@Override
+	public void init() throws ServletException {
+		super.init();
+		/*WebApplicationContext mWebApplicationContext
+				= WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
+		CategoryService =(CategoryService) mWebApplicationContext.getBean("categoryServiceImpl");
+*/
+		SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,this.getServletContext());
+
+
+	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -152,6 +172,7 @@ public void jump(HttpServletRequest req, HttpServletResponse resp) throws Servle
 		int id=	Integer.parseInt(req.getParameter("_id"));
 		
 		Category category=CategoryService.findcategoryById(id);
+		System.out.println(category);
 		req.setAttribute("category", category);
 req.getRequestDispatcher("updatecategory.jsp").forward(req, resp);		
 	}

@@ -6,8 +6,9 @@ import com.neuedu.dao.CartDao;
 import com.neuedu.data.CartData;
 
 import com.neuedu.entity.Cart;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public class CartDaoImpl implements CartDao {
 	CartData cartdata=new CartData();
 	@Override

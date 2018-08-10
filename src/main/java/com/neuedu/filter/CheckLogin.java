@@ -15,18 +15,25 @@ import javax.servlet.http.HttpSession;
 import com.neuedu.entity.User;
 import com.neuedu.service.UserService;
 import com.neuedu.serviceImpl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 
- 
 /*@WebFilter("/product/*")*/
+@Component
 public class CheckLogin implements Filter {
 
+	@Autowired
+	UserService userservice;
     /**
      * Default constructor. 
      */
     public CheckLogin() {
         // TODO Auto-generated constructor stub
-    }
+		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+	}
 
 	/**
 	 * @see Filter#destroy()
@@ -46,18 +53,11 @@ public class CheckLogin implements Filter {
 		System.out.println(session.getMaxInactiveInterval());
 		Object o=session.getAttribute("token");
 		Object user_obj=session.getAttribute("user");
-
-
-
-
-
-
-		
 		if(o!=null&&user_obj!=null) {
 			String _session=(String)o;
 			User _user=(User)user_obj;
 			System.out.println("guolv="+_user);
-			UserService userservice=new UserServiceImpl();
+
 			String _token= userservice.findToken(_user.getAccountid());
 
 

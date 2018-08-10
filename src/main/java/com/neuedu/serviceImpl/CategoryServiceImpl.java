@@ -9,9 +9,21 @@ import com.neuedu.entity.Category;
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
 import com.neuedu.service.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
-	CategoryDao CategoryDao =new MyBatisCategoryImpl();
+
+	@Autowired
+	@Qualifier("myBatisCategoryImpl")
+	CategoryDao CategoryDao ;
+
+	public void setCategoryDao(CategoryDao categoryDao) {
+		this.CategoryDao = categoryDao;
+	}
+
 	@Override
 	public boolean addCategory(Category category) {
 		

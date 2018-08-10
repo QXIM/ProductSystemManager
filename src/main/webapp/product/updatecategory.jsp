@@ -15,7 +15,7 @@
 	<input type="hidden" name="operation" value="5"/>
 	<table>
 	<tr>
-	<td><input type="text" name="id" value=${ category.id } readonly="readonly" /></td>
+	<td><input type="text" name="id" value=${ category.categoryid } readonly="readonly" /></td>
 	</tr>
 	<tr>
 	<td><span>输入类别名称：</span></td>

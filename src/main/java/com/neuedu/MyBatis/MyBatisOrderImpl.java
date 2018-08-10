@@ -6,20 +6,21 @@ import com.neuedu.entity.Order;
 import com.neuedu.entity.OrderItem;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Repository
 public class MyBatisOrderImpl implements OrderDao {
+    @Autowired
+    SqlSession sqlSession;
+
     @Override
 
     public boolean addOrder(Order order) {
 
-        SqlSession session;
-        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
-
-        session = sqlMapper.openSession(true);
 
         Long order_no=order.getOrder_no();
         Integer user_id=order.getUser_id();
@@ -32,9 +33,9 @@ public class MyBatisOrderImpl implements OrderDao {
 
 
 
-        OrderDao orderDao= session.getMapper(OrderDao.class);
+        OrderDao orderDao= sqlSession.getMapper(OrderDao.class);
         orderDao.addOrder(order);
-        MyBatis.close(session);
+
         return true;
 
 
@@ -42,13 +43,11 @@ public class MyBatisOrderImpl implements OrderDao {
 
     @Override
     public List<Order> findAll() {
-        SqlSession session;
-        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
-        session = sqlMapper.openSession();
-        OrderDao orderDao=session.getMapper(OrderDao.class);
+
+        OrderDao orderDao=sqlSession.getMapper(OrderDao.class);
         List<Order> orderList=orderDao.findAll();
         System.out.println(orderList);
-        MyBatis.close(session);
+
          return orderList;
 
     }
@@ -59,8 +58,18 @@ public class MyBatisOrderImpl implements OrderDao {
     }
 
     @Override
-    public boolean updateOrder(Order Cart) {
-        return false;
+    public boolean updateOrder(long order_no,int status) {
+        System.out.println(order_no);
+        System.out.println(status);
+         OrderDao orderDao=sqlSession.getMapper(OrderDao.class);
+        boolean re=orderDao.updateOrder(order_no,status);
+        if (re){
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 
     @Override
@@ -71,14 +80,12 @@ public class MyBatisOrderImpl implements OrderDao {
     @Override
     public Order findOrderItemByOrderNo(long order_no) {
 
-        SqlSession session;
-        SqlSessionFactory sqlMapper=MyBatis.getSqlSessionFactory();
-        session = sqlMapper.openSession();
 
-        OrderDao orderDao=session.getMapper(OrderDao.class);
+
+        OrderDao orderDao=sqlSession.getMapper(OrderDao.class);
        Order order= orderDao.findOrderItemByOrderNo(order_no);
         System.out.println(order);
-        MyBatis.close(session);
+
 
         return order;
 

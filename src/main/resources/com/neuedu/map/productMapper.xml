@@ -31,20 +31,22 @@
 
 
     <update id="updateProduct" parameterType="com.neuedu.entity.Product">
-
-        update	product set pname=#{pname} ,price=#{price} ,image=#{image} ,stock=#{stock} ,detail=#{detail} where productid=#{productid}
+update	product set pname=#{pname} ,price=#{price} ,image=#{image} ,stock=#{stock} ,detail=#{detail} where productid=#{productid}
     </update>
     
     <insert id="addProduct" parameterType="com.neuedu.entity.Product">
-
     insert into product( pname,price,image,stock,detail,rule)  values(#{pname},#{price},#{image},#{stock},#{detail},#{rule})
-
-    </insert>
+  </insert>
 
 
 
     <select id="findproductById" resultType="com.neuedu.entity.Product" parameterType="java.lang.Integer">
         select * from product where productid=#{id}
-    </select>
+
+</select>
+
+    <update id="updateProductStock" parameterType="com.neuedu.entity.Product">
+          update	product set stock=#{stock}   where productid=#{productid}
+    </update>
 
 </mapper>

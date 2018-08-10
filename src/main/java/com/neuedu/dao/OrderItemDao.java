@@ -3,7 +3,9 @@ package com.neuedu.dao;
 import java.util.List;
 
 import com.neuedu.entity.OrderItem;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface OrderItemDao {
 	
 			//��

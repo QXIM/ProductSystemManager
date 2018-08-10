@@ -17,7 +17,7 @@
 			$(function (){
 			$.ajax({
 				type:'get',
-				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findAllCart',
+				url:'http://localhost:8080/ProductSystemManager/com/neuedu/front/cart.do?method=findCart',
 				dataType:'json',
 				success : function (result) {
 
@@ -25,7 +25,7 @@
                         var _obj=result[i]
 						console.log(_obj)
 
-						$("#content").append("<div class=\"shoping_cart_detail_content1\">\n" +
+$("#content").append("<div class=\"shoping_cart_detail_content1\">\n" +
                             "\t\t\t\t\t\t<div class=\"shoping_cart_detail_content1_buttom\">\n" +
                             "\t\t\t\t\t\t\t<input type=\"checkbox\" class=\"shoping_cart_detail_content1_buttom_css\" />\n" +
                             "\t\t\t\t\t\t</div>\n" +
@@ -61,6 +61,11 @@
                             "\t\t\t\t\t</div>")
  })
 }
+					.detail_centent_low.click(function () {
+                    alert("123")
+            })
+
+
 })
 	$.ajax({
         type:'get',

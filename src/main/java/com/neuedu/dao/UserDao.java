@@ -1,8 +1,9 @@
 package com.neuedu.dao;
 
 import com.neuedu.entity.User;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface UserDao {
 	
 	boolean addUser(User user);

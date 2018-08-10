@@ -13,7 +13,7 @@
             color: #0a3665;
             font-size: 16px ;
             text-align: center;
-            width: 700px;
+            width: 800px;
 
 
         }

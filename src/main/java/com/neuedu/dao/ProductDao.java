@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductDao {
 
 	//��
@@ -24,8 +26,8 @@ public interface ProductDao {
 	//pagesize ÿҳ����������
 	
 	public PageModel<Product> findProductByPage(int pageNo, int pageSize);
-	
-	
+
+	public boolean updateProductStock(Product product);
 	
 	
 }

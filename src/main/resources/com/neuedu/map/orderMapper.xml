@@ -16,7 +16,7 @@ insert into orders(ordersid,user_id,shipping_id,order_no,payment_type,postage,st
 
         <result column="order_no" property="order_no"></result>
 
-        <collection property="orderItemList" autoMapping="true" javaType="ArrayList" column="num" ofType="com.neuedu.entity.OrderItem">
+        <collection property="orderItemList" autoMapping="true" javaType="ArrayList" column="orderItem_no" ofType="com.neuedu.entity.OrderItem">
 
     <result property="orderItem_no" column="orderItem_no"></result>
 
@@ -27,11 +27,16 @@ insert into orders(ordersid,user_id,shipping_id,order_no,payment_type,postage,st
   select od.order_no ,od.payment,od.payment_type,od.postage,od.status,od.create_time,od.user_id,od.shipping_id,
   odi.product_id,odi.product_name,odi.product_image,odi.current_unit_price,odi.quantity,odi.total_price,odi.product_rule
  from orders od
-    left join orderitem   odi
+join orderitem   odi
     on od.order_no=odi.orderItem_no
     where od.order_no=#{args0}
 </select>
 
+
+    <update id="updateOrder" parameterType="com.neuedu.entity.Order">
+        update orders set status=#{arg1} where order_no=#{arg0}
+
+    </update>
 
 
 </mapper>

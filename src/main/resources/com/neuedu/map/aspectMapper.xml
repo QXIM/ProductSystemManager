@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.Aspect.AopDao">
+
+    <insert id="addAspect" parameterType="com.neuedu.Aspect.LogBean" >
+
+        insert into aop (op,create_time) values (#{op},now())
+
+    </insert>
+
+
+
+</mapper>

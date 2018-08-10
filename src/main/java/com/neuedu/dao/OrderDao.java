@@ -4,8 +4,9 @@ import java.util.List;
 
 import com.neuedu.entity.Order;
 import com.neuedu.entity.OrderItem;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface OrderDao {
 	
 
@@ -16,7 +17,7 @@ public interface OrderDao {
 		//ɾ��
 		boolean deleteOrder(int id);
 		//�޸�
-		boolean updateOrder(Order Cart);
+		boolean updateOrder(long order_no,int status);
 	
 		int idBySize();
 

@@ -9,10 +9,20 @@ import com.neuedu.daoImpl.ProductDaoImpl2;
 import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
 import com.neuedu.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductServiceImpl implements ProductService {
-	ProductDao productdao=new MyBatisProductImpl();
-	
+    @Autowired
+	@Qualifier("myBatisProductImpl")
+	ProductDao productdao;
+
+	public void setProductdao(ProductDao productdao) {
+		this.productdao = productdao;
+	}
+
 	public boolean addProduct(Product product) {
 		// TODO Auto-generated method stub
 		return productdao.addProduct(product);

@@ -1,7 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:contex="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+<!--
+
+购物车
+    <bean id="cartService" class="com.neuedu.serviceImpl.CartServiceImpl">
+
+<property name="cartdao" ref="cartDao"></property>
+
+
+    </bean>
+
+
+    <bean id="cartDao" class="com.neuedu.MyBatis.MyBatisCartImpl"></bean>
+
+
+
+
+    类别
+    <bean id="CategoryService" class="com.neuedu.serviceImpl.CategoryServiceImpl">
+
+<property name="CategoryDao" ref="categorydao"></property>
+
+    </bean>
+
+    <bean id="categorydao" class="com.neuedu.MyBatis.MyBatisCategoryImpl"></bean>
+
+
+
+商品
+    <bean id="productservice" class="com.neuedu.serviceImpl.ProductServiceImpl">
+        <property name="productdao" ref="peoductDao"></property>
+
+    </bean>
+
+    <bean id="peoductDao" class="com.neuedu.MyBatis.MyBatisProductImpl"></bean>
+
+
+    订单
+
+
+-->
+
+
+<contex:component-scan base-package="com.neuedu"/>
+
+<contex:property-placeholder location="classpath:jdbc.properties"></contex:property-placeholder>
+    <!-- c3p0带有连接池的数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.userpassword}"></property>
+    </bean>
+    
+
+    <!-- 注入SqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!-- 加载com/neuedu/map/包及其子包下的*Mapper.xml -->
+        <property name="mapperLocations" value="classpath:com/neuedu/map/*Mapper.xml" />
+        <!--加载mybatis全局的配置文件  -->
+        <property name="configLocation" value="classpath:MyBatis-config.xml"/>
+    </bean>
+
+
+    <!-- sqlsessionTemplate -->
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+
+
+
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="dataSource"></property>
+</bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
+
+<!--<tx:advice id="txAdvice" transaction-manager="transactionManager">
+    
+    <tx:attributes>
+        <tx:method name="*" isolation="READ_COMMITTED" read-only="false" propagation="REQUIRED" />
+    </tx:attributes>
+    
+</tx:advice>
+<aop:config>
+    <aop:pointcut id="mypoint" expression="execution(* com.neuedu.transactional.TransactionalService.updateMoney(String,String,int))"></aop:pointcut>
+    <aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint"></aop:advisor>
+</aop:config>-->
+
+
+
 
 
 

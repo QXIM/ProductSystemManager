@@ -136,7 +136,7 @@ public class OrderDaoImpl2 implements OrderDao {
 	}
 
 	@Override
-	public boolean updateOrder(Order Cart) {
+	public boolean updateOrder(long order_no,int status) {
 		// TODO Auto-generated method stub
 		return false;
 	}

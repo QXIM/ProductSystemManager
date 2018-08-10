@@ -8,10 +8,26 @@ import com.neuedu.daoImpl.CartDaoImpl;
 import com.neuedu.daoImpl.CartDaoImpl2;
 import com.neuedu.entity.Cart;
 import com.neuedu.service.CartService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CartServiceImpl implements CartService {
-	CartDao cartdao=new MyBatisCartImpl();
+	@Autowired
+    @Qualifier("myBatisCartImpl")
+	CartDao cartdao;
+
+
+
+	public void setCartdao(CartDao cartdao) {
+		this.cartdao = cartdao;
+	}
 	@Override
+
+
+
+
 	public boolean addCart(Cart Cart) {
 		// TODO Auto-generated method stub
 		return cartdao.addCart(Cart);
@@ -47,5 +63,6 @@ public class CartServiceImpl implements CartService {
 		
 		return cartdao.findById(id);
 	}
+
 
 }

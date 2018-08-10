@@ -13,14 +13,33 @@ import com.neuedu.entity.PageModel;
 import com.neuedu.entity.Product;
 import com.neuedu.service.ProductService;
 import com.neuedu.serviceImpl.ProductServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 @WebServlet("/product/product")
+@Controller
 public class ProductController extends HttpServlet {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	ProductService productservice=new ProductServiceImpl();
+	@Autowired
+	ProductService productservice;
+
+	@Override
+	public void init() throws ServletException {
+		super.init();
+		/*WebApplicationContext webApplicationContext=
+				WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
+
+		productservice=(ProductService)webApplicationContext.getBean("productServiceImpl");
+*/
+		SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,this.getServletContext());
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub

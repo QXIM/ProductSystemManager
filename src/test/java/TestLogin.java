@@ -141,13 +141,11 @@ public class TestLogin {
     cartDao.addCart(cart);
 
     }
-    @Test
+
     public void testfindAllCart(){
         CartDao cartDao=new MyBatisCartImpl();
         cartDao.findAllCart();
-
-
-    }
+}
 
 
    /* public void  testAddOrderItemi(){
@@ -159,7 +157,7 @@ public class TestLogin {
         orderItemDao.addOrderItem(list);
 
     }*/
-
+   @Test
     public void testorderItem(){
         OrderDao orderDao=new MyBatisOrderImpl();
         orderDao.findOrderItemByOrderNo(1533112716928L);
@@ -185,11 +183,35 @@ public class TestLogin {
         CartDao cartDao=new     MyBatisCartImpl();
         cartDao.updateCartNum(36,2);
     }
-    @Test
+
     public void testfindbyid(){
         CartDao cartDao=new     MyBatisCartImpl();
         cartDao.findById(40);
     }
+
+    @Test
+    public void testint(){
+        int i=2;
+        int y=i++/3;
+        System.out.println(y);
+
+
+    }
+    @Test
+    public void testCharAt(){
+    String str="Stock3num00Amar38sf0";
+    String str2="";
+
+if (str!=null&&!str.equals(""))
+    {
+    for (int i=0;i<str.length();i++){
+    if (str.charAt(i)>=48&&str.charAt(i)<=57){
+            str2+=str.charAt(i);
+        }
+    }
+} System.out.println(str2);
+    }
+
 
 
 

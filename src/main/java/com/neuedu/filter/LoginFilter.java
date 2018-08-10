@@ -17,18 +17,24 @@ import com.neuedu.entity.User;
 import com.neuedu.input.MD5Utils;
 import com.neuedu.service.UserService;
 import com.neuedu.serviceImpl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 /**
  * Servlet Filter implementation class Login
  */
-@WebFilter("/login.jsp")
+/*@WebFilter("/login.jsp")*/
+@Component
 public class LoginFilter implements Filter {
-
+	@Autowired
+	UserService userServiceImpl;
     /**
      * Default constructor. 
      */
     public LoginFilter() {
         // TODO Auto-generated constructor stub
+		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
 	/**
@@ -61,7 +67,7 @@ public class LoginFilter implements Filter {
 		}
 		}
 		if(_username!=null&&_password!=null) {
-			UserService userServiceImpl=new UserServiceImpl();
+
 			User user= userServiceImpl.checkUser(_username, _password);
 			if(user!=null) {
 				long time=System.currentTimeMillis();

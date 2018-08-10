@@ -1,5 +1,7 @@
 package com.neuedu.filter;
 
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -12,7 +14,8 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class CharacterFilter
  */
-@WebFilter("/*")
+/*@WebFilter("/*")*/
+@Component
 public class CharacterFilter implements Filter {
 
     /**

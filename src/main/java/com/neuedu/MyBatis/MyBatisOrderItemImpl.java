@@ -8,17 +8,21 @@ import com.neuedu.entity.Order;
 import com.neuedu.entity.OrderItem;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class MyBatisOrderItemImpl implements OrderItemDao {
+
+    @Autowired
+    SqlSession sqlSession;
+
     @Override
     public boolean addOrderItem(List<OrderItem> orderItem) {
-        Integer result=0;
-        SqlSession session;
-        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
-        session = sqlMapper.openSession(true);
-        OrderItemDao orderItemDao=session.getMapper(OrderItemDao.class);
+
+        OrderItemDao orderItemDao=sqlSession.getMapper(OrderItemDao.class);
         orderItemDao.addOrderItem(orderItem);
        return true;
     }
@@ -45,11 +49,8 @@ public class MyBatisOrderItemImpl implements OrderItemDao {
 
 
     public List<OrderItem> findOrderItemByOrderNo(Long order_no){
-        Integer result=0;
-        SqlSession session;
-        SqlSessionFactory sqlMapper= MyBatis.getSqlSessionFactory();
-        session = sqlMapper.openSession(true);
-        OrderItemDao orderItemDao=session.getMapper(OrderItemDao.class);
+
+        OrderItemDao orderItemDao=sqlSession.getMapper(OrderItemDao.class);
         List<OrderItem> list= orderItemDao.findOrderItemByOrderNo(order_no);
 
             return list;
