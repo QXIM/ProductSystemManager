@@ -59,12 +59,6 @@ public class CheckLogin implements Filter {
 			System.out.println("guolv="+_user);
 
 			String _token= userservice.findToken(_user.getAccountid());
-
-
-
-
-
-
 			if(_token!=null) {
 			if(_session.equals(_token)) {
 				chain.doFilter(request, response);

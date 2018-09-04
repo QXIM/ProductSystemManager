@@ -48,16 +48,13 @@ public class LoginFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("DAODA");
 		HttpServletRequest _request=(HttpServletRequest)request;
 		HttpServletResponse _response=(HttpServletResponse)response;
-		
-		
 		Cookie[] cookies=_request.getCookies();
 		String _username=null;
 		String _password=null;
-		if(cookies!=null) {
-		for( Cookie c:cookies) {
+		if(cookies!=null){
+		for(Cookie c:cookies) {
 			if(c.getName().equals("username")) {
 				_username=c.getValue();
 			}
@@ -67,24 +64,20 @@ public class LoginFilter implements Filter {
 		}
 		}
 		if(_username!=null&&_password!=null) {
-
 			User user= userServiceImpl.checkUser(_username, _password);
 			if(user!=null) {
-				long time=System.currentTimeMillis();
-				String token=MD5Utils.GetMD5Code(_username+_password+time);
-				System.out.println(user);
-				userServiceImpl.addToken(token,user);
-				HttpSession session=_request.getSession();
-				session.setAttribute("token", token);
-				session.setAttribute("user",user);
-				
-				
-				_request.getRequestDispatcher("product/loginsucc.jsp").forward(_request, _response);
+	long time=System.currentTimeMillis();
+	String token=MD5Utils.GetMD5Code(_username+_password+time);
+	userServiceImpl.addToken(token,user);
+	HttpSession session=_request.getSession();
+	session.setAttribute("token", token);
+	session.setAttribute("user",user);
+	_request.getRequestDispatcher("product/loginsucc.jsp").forward(_request, _response);
 			}else {
 				chain.doFilter(request, response);
 			}
 		}else {
-		chain.doFilter(request, response);
+		chain.doFilter(request,response);
 	}
 	}
 	/**
